@@ -39,10 +39,3 @@ details {
     cursor: pointer;
 }
 
-fieldset {
-    border: none;
-}
-
-legend {
-    font-variant-caps: all-small-caps;
-}

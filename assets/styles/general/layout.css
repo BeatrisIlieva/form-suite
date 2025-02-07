@@ -4,10 +4,17 @@ body {
     flex-direction: column;
 }
 
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
 .layout-item {
     padding: 1dvh max(calc((100vw - 1000px) / 2), 1dvh);
 }
 
-.layout-item.main-content {
-    flex-grow: 1;
+section.layout-item {
+    align-self: center;
 }

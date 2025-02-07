@@ -1,0 +1,14 @@
+body {
+    background: var(--clr-black);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-item {
+    padding: 1dvh max(calc((100vw - 1000px) / 2), 1dvh);
+}
+
+.layout-item.main-content {
+    flex-grow: 1;
+}

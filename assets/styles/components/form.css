@@ -3,7 +3,8 @@
         border: none;
     }
 
-    & legend, & input[type='submit'] {
+    & legend,
+    & input[type='submit'] {
         font-variant-caps: all-small-caps;
     }
 
@@ -20,6 +21,21 @@
             position: absolute;
             top: 0.12em;
             left: 0.1em;
+        }
+
+        & input {
+            outline: none;
+            border: none;
+            border-bottom: 0.11em solid var(--clr-black);
+            transition: border-color 0.3s ease-in-out;
+
+            &::placeholder {
+                color: transparent;
+            }
+
+            &:focus {
+                border-color: var(--clr-pink);
+            }
         }
     }
 }

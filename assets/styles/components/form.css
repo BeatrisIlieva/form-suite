@@ -103,7 +103,7 @@
                 color: transparent;
             }
 
-            &:user-invalid {
+            &:not(:placeholder-shown):user-invalid {
                 border-color: var(--clr-red);
 
                 & ~ label {
@@ -113,7 +113,28 @@
                 & ~ .error-message {
                     opacity: 1;
                 }
+
+                & ~ .empty-field-error {
+                    opacity: 0;
+                }
             }
+
+            &:placeholder-shown:user-invalid  {
+                border-color: var(--clr-red);
+
+                & ~ label {
+                    color: var(--clr-red);
+                }
+                
+                & ~ .error-message {
+                    opacity: 0;
+                }
+
+                & ~ .empty-field-error {
+                    opacity: 1;
+                }
+            }
+
 
             &:user-valid {
                 border-color: var(--clr-green);
@@ -145,6 +166,15 @@
         }
 
         & .error-message {
+            color: var(--clr-red);
+            opacity: 0;
+            font-size: 0.8em;
+            padding-left: 0.25em;
+            transition: opacity 0.3s ease-out;
+            margin-bottom: 0.5em;
+        }
+
+        & .empty-field-error {
             color: var(--clr-red);
             opacity: 0;
             font-size: 0.8em;

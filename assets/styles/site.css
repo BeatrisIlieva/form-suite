@@ -6,4 +6,6 @@
 @import url(general/site-header.css);
 @import url(general/site-footer.css);
 
+@import url(components/form.css);
+
 @import url(pages/home.css);

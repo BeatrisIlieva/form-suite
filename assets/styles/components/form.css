@@ -1,9 +1,9 @@
 .form {
-    fieldset {
+    & fieldset {
         border: none;
     }
 
-    legend {
+    & legend, & input[type='submit'] {
         font-variant-caps: all-small-caps;
     }
 }

@@ -24,15 +24,15 @@
         & label {
             color: var(--clr-black);
             position: absolute;
-            top: 0;
-            left: 0.6em;
-            transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
+            top: 0.8em;
+            left: 0.75rem;
+            transition: color 0.3s ease-in-out, top 0.3s ease-in-out;
         }
 
         & input {
             outline: none;
             border: 0.08em solid var(--clr-black);
-            border-radius: 0.1em;
+            border-radius: 0.2em;
             transition: border-color 0.3s ease-in-out;
             overflow: hidden;
             padding: 0.75em;
@@ -63,9 +63,19 @@
 
             &:focus ~ label {
                 color: var(--clr-yellow);
+            }
+
+            &:focus ~ label, &:not(:placeholder-shown) ~ label {
                 top: 0;
                 font-size: 0.7em;
             }
+
+            &:required ~ label::after {
+                content: '*';
+                color: var(--clr-blue);
+                padding-left: 0.05em;
+            }
+            
         }
     }
 }

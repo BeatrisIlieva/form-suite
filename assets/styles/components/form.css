@@ -1,12 +1,41 @@
-.form {
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
+    border-radius: 0.3em;
+    overflow: hidden;
+    gap: 2em;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    & .media {
+        flex: 1 1 50%;
+        align-self: flex-start;
+        justify-self: flex-start;
+
+
+        & img {
+            width: 100%;
+            height: auto;
+
+            @media(max-width: 816px){
+                height: 26dvh;
+                object-fit: cover;
+            }
+        }
+    }
+
     & fieldset {
         border: none;
-        display: flex;
+        margin: 2em;
+        align-self: center;
+        justify-self: center;
     }
 
     & form {
         display: flex;
         flex-direction: column;
+        flex: 1 1 50%;
     }
 
     & legend,
@@ -17,7 +46,7 @@
     & legend {
         font-size: 1.8em;
         padding-bottom: 0.1em;
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
         border-bottom: 0.05em solid var(--clr-light-gray);
     }
 
@@ -121,5 +150,7 @@
         padding: 0.5em 1.25em;
         border-radius: 0.3em;
         flex-grow: 1;
+        font-weight: 500;
+        font-size: 1.1em;
     }
 }

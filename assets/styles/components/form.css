@@ -22,14 +22,15 @@
         padding-bottom: 1.5em;
 
         & label {
+            color: var(--clr-black);
             position: absolute;
             top: 0.6em;
             left: 0.5em;
+            transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
         & input {
             outline: none;
-            /* border: none; */
             border: 0.08em solid var(--clr-black);
             border-radius: 0.1em;
             transition: border-color 0.3s ease-in-out;

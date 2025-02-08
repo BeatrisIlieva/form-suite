@@ -10,12 +10,16 @@
 
     & legend {
         font-size: 1.8em;
+        padding-bottom: 0.1em;
+        margin-bottom: 1em;
+        border-bottom: 0.05em solid var(--clr-light-gray)
     }
 
     & .field {
         display: flex;
         flex-direction: column;
         position: relative;
+        padding-bottom: 1.5em;
 
         & label {
             position: absolute;
@@ -35,6 +39,11 @@
 
             &:focus {
                 border-color: var(--clr-pink);
+            }
+
+            &:user-invalid {
+                border-color: var(--clr-red);
+
             }
         }
     }

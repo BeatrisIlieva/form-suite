@@ -29,7 +29,7 @@
         & label {
             color: var(--clr-black);
             position: absolute;
-            top: 0.8em;
+            top: 1.05em;
             left: 1rem;
             transition: color 0.3s ease-in-out, top 0.3s ease-in-out;
         }
@@ -37,7 +37,7 @@
         & i {
             color: var(--clr-black);
             position: absolute;
-            top: 1.05em;
+            top: 1.25em;
             right: 0.75rem;
             transition: color 0.3s ease-in-out, top 0.3s ease-in-out;
         }
@@ -58,26 +58,34 @@
 
             &:user-invalid {
                 border-color: var(--clr-red);
+
+                & ~ label {
+                    color: var(--clr-red);
+                }
+
+                & ~ .error-message {
+                    opacity: 1;
+                }
             }
 
             &:user-valid {
                 border-color: var(--clr-green);
+
+                & ~ label {
+                    color: var(--clr-green);
+                }
             }
 
             &:focus {
                 border-color: var(--clr-yellow);
-            }
 
-            &:user-invalid ~ label {
-                color: var(--clr-red);
-            }
+                & ~ label {
+                    color: var(--clr-yellow);
+                }
 
-            &:user-valid ~ label {
-                color: var(--clr-green);
-            }
-
-            &:focus ~ label {
-                color: var(--clr-yellow);
+                & ~ .error-message {
+                    opacity: 0;
+                }
             }
 
             &:focus ~ label,
@@ -91,6 +99,18 @@
                 color: var(--clr-blue);
                 padding-left: 0.05em;
             }
+        }
+
+        & .error-message {
+            color: var(--clr-red);
+            opacity: 0;
+            padding-left: 0.5em;
+            padding-top: 0.25em;
+            font-size: 0.8em;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: opacity 0.3s ease-out;
         }
     }
 }

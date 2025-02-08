@@ -1,4 +1,7 @@
 <section class="layout-item form register-form">
+    <div class="media">
+        <img src="" alt="">
+    </div>
     <fieldset>
         <legend>Create Account</legend>
         
@@ -7,12 +10,26 @@
                 <input type="email" name="register-email" id="register-email" placeholder="Email" required>
                 <label for="register-email">Email</label>
                 <i class="fa-solid fa-envelope"></i>
+                <span class="error-message">Please enter a valid email address</span>
+            </div>
+
+            <div class="field">
+                <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                <label for="first-name">First Name</label>
+                <span class="error-message">Please enter your first name</span>
+            </div>
+
+            <div class="field">
+                <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                <label for="last-name">First Name</label>
+                <span class="error-message">Please enter your last name</span>
             </div>
 
             <div class="field">
                 <input type="password" name="register-password" id="register-password" placeholder="Password" required>
                 <label for="register-password">Password</label>
                 <i class="fa-solid fa-eye-slash"></i>
+                <span class="error-message">Please enter a password</span>
             </div>
             
             <input type="submit" value="Register">

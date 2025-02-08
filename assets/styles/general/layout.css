@@ -12,9 +12,9 @@ main {
 }
 
 .layout-item {
-    padding: 1dvh max(calc((100vw - 1000px) / 2), 1dvh);
+    padding: 1dvh max(calc((100vw - 1300px) / 2), 1dvh);
 }
 
 .form.layout-item {
-    align-self: center;
+    /* align-self: center; */
 }

@@ -1,7 +1,9 @@
-fieldset {
-    border: none;
-}
+.form {
+    fieldset {
+        border: none;
+    }
 
-legend {
-    font-variant-caps: all-small-caps;
+    legend {
+        font-variant-caps: all-small-caps;
+    }
 }

@@ -1,11 +1,12 @@
-/* .layout-item.form.register-form {
-    width: 100%;
-} */
-
 .form {
     & fieldset {
         border: none;
         display: flex;
+    }
+
+    & form {
+        display: flex;
+        flex-direction: column;
     }
 
     & legend,
@@ -25,6 +26,7 @@
         flex-direction: column;
         position: relative;
         margin-bottom: 0.25em;
+        flex-grow: 1;
 
         & label {
             color: var(--clr-black);

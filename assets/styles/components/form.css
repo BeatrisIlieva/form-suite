@@ -6,4 +6,20 @@
     & legend, & input[type='submit'] {
         font-variant-caps: all-small-caps;
     }
+
+    & legend {
+        font-size: 1.8em;
+    }
+
+    & .field {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        & label {
+            position: absolute;
+            top: 0.12em;
+            left: 0.1em;
+        }
+    }
 }

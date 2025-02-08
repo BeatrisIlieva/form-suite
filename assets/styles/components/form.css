@@ -1,25 +1,25 @@
 .wrapper {
     display: flex;
-    flex-wrap: wrap;
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
     border-radius: 0.3em;
     overflow: hidden;
-    gap: 2em;
-    align-items: flex-start;
-    justify-content: flex-start;
+    gap: 3em;
+
+    @media (max-width: 686px) {
+        flex-direction: column;
+    }
 
     & .media {
-        flex: 1 1 50%;
-        align-self: flex-start;
-        justify-self: flex-start;
-
+        flex: 1 1 40%;
+        box-shadow: 0.5em 0 0.9em 0 rgb(0, 0, 0, 0.9);
+        display: flex;
 
         & img {
             width: 100%;
             height: auto;
 
-            @media(max-width: 816px){
-                height: 26dvh;
+            @media (max-width: 686px) {
+                height: 20dvh;
                 object-fit: cover;
             }
         }
@@ -27,15 +27,17 @@
 
     & fieldset {
         border: none;
-        margin: 2em;
-        align-self: center;
-        justify-self: center;
+        flex: 1 1 40%;
+        margin: 3em 3em 3em 0;
+
+        @media (max-width: 686px) {
+            margin: 0 2em 2em 2em;
+        }
     }
 
     & form {
         display: flex;
         flex-direction: column;
-        flex: 1 1 50%;
     }
 
     & legend,
@@ -55,7 +57,6 @@
         flex-direction: column;
         position: relative;
         margin-bottom: 0.25em;
-        flex-grow: 1;
 
         & label {
             color: var(--clr-black);
@@ -80,8 +81,6 @@
             transition: border-color 0.3s ease-in-out;
             overflow: hidden;
             padding: 1em;
-            width: 36ch;
-            max-width: 46ch;
 
             &::placeholder {
                 color: transparent;
@@ -147,7 +146,7 @@
         cursor: pointer;
         background: var(--clr-black);
         color: var(--clr-white);
-        padding: 0.5em 1.25em;
+        padding: 0.75em 1.25em;
         border-radius: 0.3em;
         flex-grow: 1;
         font-weight: 500;

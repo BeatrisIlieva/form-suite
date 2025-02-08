@@ -8,7 +8,7 @@
             
             <form action="#" method="POST">
                 <div class="field">
-                    <input type="email" name="register-email" id="register-email" placeholder="Email" required>
+                    <input type="email" name="register-email" id="register-email" placeholder="Email" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
                     <label for="register-email">Email</label>
                     <i class="fa-solid fa-envelope"></i>
                     <span class="error-message">Please enter a valid email address</span>

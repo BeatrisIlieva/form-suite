@@ -1,8 +1,4 @@
 .register-form {
-    & .media {
-        height: 140dvh;
-    }
-
     & header {
         display: flex;
         align-items: center;

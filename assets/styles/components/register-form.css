@@ -10,7 +10,7 @@
             font-weight: 500;
         }
 
-        input[type='checkbox'] {
+        & input[type='checkbox'] {
             appearance: none;
             position: relative;
             width: 1.4em;
@@ -19,38 +19,46 @@
             z-index: 0;
             border-radius: 0.1em;
             align-self: flex-start;
-        }
 
-        input[type='checkbox']::after,
-        input[type='checkbox']::before {
-            position: absolute;
-            opacity: 0;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.3s ease-in-out;
-        }
+            &:user-invalid {
+                border-color: var(--clr-red);
 
-        input[type='checkbox']::after {
-            content: '';
-            background: var(--clr-black);
-            width: 100%;
-            aspect-ratio: 1/1;
-        }
+                & ~ label {
+                    color: var(--clr-red);
+                }
+            }
 
-        input[type='checkbox']::before {
-            content: '\2713';
-            color: var(--clr-white);
-            font-size: 1em;
-            z-index: 2;
-        }
+            &::after,
+            &::before {
+                position: absolute;
+                opacity: 0;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.3s ease-in-out;
+            }
 
-        input[type='checkbox']:checked::before {
-            opacity: 1;
-        }
+            &::after {
+                content: '';
+                background: var(--clr-black);
+                width: 100%;
+                aspect-ratio: 1/1;
+            }
 
-        input[type='checkbox']:checked::after {
-            opacity: 1;
+            &::before {
+                content: '\2713';
+                color: var(--clr-white);
+                font-size: 1em;
+                z-index: 2;
+            }
+
+            &:checked::before {
+                opacity: 1;
+            }
+
+            &:checked::after {
+                opacity: 1;
+            }
         }
     }
 }

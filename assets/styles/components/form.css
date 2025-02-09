@@ -80,7 +80,7 @@
     }
 
     & legend {
-        font-size: 1.8em;
+        font-size: 2em;
         margin-bottom: 1em;
     }
 
@@ -188,19 +188,31 @@
         }
     }
 
-    & input[type='submit'] {
+    & .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         letter-spacing: 0.08em;
         cursor: pointer;
-        background: var(--clr-black);
-        color: var(--clr-white);
         padding: 0.75em 1.25em;
         border-radius: 0.1em;
-        border: 0.2em solid var(--clr-medium-gray);
+        border: 0.1em solid var(--clr-medium-gray);
         flex-grow: 1;
         font-weight: 500;
         font-size: 1.1em;
         transition: opacity 0.3s ease-in-out, background 0.3s ease-in-out,
             text-shadow 0.6s ease-in-out;
+    }
+
+    & input[type='submit'],
+    & .btn {
+        background: var(--clr-black);
+        color: var(--clr-white);
+    }
+
+    & a.btn:hover {
+        background: var(--clr-blue);
+        text-shadow: 0 0 1em var(--clr-black);
     }
 }
 

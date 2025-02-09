@@ -33,7 +33,6 @@ function stylePasswordCriteriaRow(isValid, checkElement, scaleElement) {
         checkElement.classList.remove('valid');
         scaleElement.classList.remove('valid');
     }
-    // isValid ? element.classList.add('valid') : element.classList.remove('valid');
 }
 
 const registerFormPasswordElement = document.getElementById('register-password');
@@ -107,4 +106,21 @@ registerFormPasswordElement.addEventListener('input', e => {
         specialCharCheckElement,
         specialCharScaleElement
     );
+});
+
+const showPasswordElement = document.getElementById('show-password');
+const hidePasswordElement = document.getElementById('hide-password');
+
+showPasswordElement.addEventListener('click', e => {
+    showPasswordElement.style.display = 'none';
+    hidePasswordElement.style.display = 'block';
+
+    registerFormPasswordElement.type = 'text';
+});
+
+hidePasswordElement.addEventListener('click', e => {
+    showPasswordElement.style.display = 'block';
+    hidePasswordElement.style.display = 'none';
+
+    registerFormPasswordElement.type = 'password';
 });

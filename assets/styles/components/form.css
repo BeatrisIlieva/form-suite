@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
-    border-radius: 0.3em;
+    border-radius: 0.2em;
     overflow: hidden;
     gap: 3em;
 
@@ -51,6 +51,10 @@
         display: flex;
         flex-direction: column;
 
+        & > *:not(:last-child) {
+            margin-bottom: 2.2em;
+        }
+
         &:has(:user-invalid) input[type='submit'] {
             cursor: not-allowed;
             opacity: 0.6;
@@ -73,7 +77,6 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-bottom: 2.2em;
 
         & label {
             color: var(--clr-black);
@@ -94,7 +97,7 @@
         & input {
             outline: none;
             border: 0.08em solid var(--clr-black);
-            border-radius: 0.2em;
+            border-radius: 0.1em;
             transition: border-color 0.3s ease-in-out;
             overflow: hidden;
             padding: 1em;
@@ -173,16 +176,21 @@
     }
 
     input[type='submit'] {
-        border: none;
         cursor: pointer;
         background: var(--clr-black);
         color: var(--clr-white);
         padding: 0.75em 1.25em;
-        border-radius: 0.3em;
+        border-radius: 0.1em;
+        border: 0.2em solid var(--clr-medium-gray);
         flex-grow: 1;
         font-weight: 500;
         font-size: 1.1em;
-        margin-top: 1em;
-        transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out, background 0.3s ease-in-out,
+            text-shadow 0.6s ease-in-out;
+
+        &:hover {
+            background: var(--clr-blue);
+            text-shadow: 0 0 1em #000;
+        }
     }
 }

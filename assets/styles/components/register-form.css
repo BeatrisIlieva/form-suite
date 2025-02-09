@@ -4,6 +4,12 @@
         align-items: center;
         gap: 0.5em;
 
+        & label {
+            font-size: 0.9em;
+            opacity: 0.5;
+            font-weight: 500;
+        }
+
         input[type='checkbox'] {
             appearance: none;
             position: relative;
@@ -12,6 +18,7 @@
             border: 0.15em solid var(--clr-light-gray);
             z-index: 0;
             border-radius: 0.1em;
+            align-self: flex-start;
         }
 
         input[type='checkbox']::after,

@@ -175,7 +175,7 @@
         }
     }
 
-    input[type='submit'] {
+    & input[type='submit'] {
         cursor: pointer;
         background: var(--clr-black);
         color: var(--clr-white);

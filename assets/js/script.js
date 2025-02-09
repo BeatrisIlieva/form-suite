@@ -13,3 +13,17 @@ document.addEventListener(
     })(),
     true
 );
+
+const registerFormPasswordElement = document.getElementById('register-password');
+
+registerFormPasswordElement.addEventListener('input', e => {
+    const lengthCheckElement = document.querySelector('.password-criteria li:nth-child(1)');
+    const upperAndLowerCaseLetterCheckElement = document.querySelector(
+        '.password-criteria li:nth-child(2)'
+    );
+    const numberCheckElement = document.querySelector('.password-criteria li:nth-child(3)');
+    const notSpacesCheckElement = document.querySelector('.password-criteria li:nth-child(4)');
+    const specialCharCheckElement = document.querySelector('.password-criteria li:nth-child(5)');
+
+    console.log(e.target.value);
+});

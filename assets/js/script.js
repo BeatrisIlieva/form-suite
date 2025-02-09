@@ -36,6 +36,7 @@ function stylePasswordCriteriaRow(isValid, checkElement, scaleElement) {
 }
 
 const registerFormPasswordElement = document.getElementById('register-password');
+const loginFormPasswordElement = document.getElementById('login-password');
 
 registerFormPasswordElement.addEventListener('input', e => {
     const lengthCheckElement = document.querySelector('.password-criteria li:nth-child(1)');
@@ -108,19 +109,45 @@ registerFormPasswordElement.addEventListener('input', e => {
     );
 });
 
-const showPasswordElement = document.getElementById('show-password');
-const hidePasswordElement = document.getElementById('hide-password');
+const loginShowPasswordElement = document.getElementById('login-show-password');
+const loginHidePasswordElement = document.getElementById('login-hide-password');
+const registerShowPasswordElement = document.getElementById('register-show-password');
+const registerHidePasswordElement = document.getElementById('register-hide-password');
 
-showPasswordElement.addEventListener('click', e => {
-    showPasswordElement.style.display = 'none';
-    hidePasswordElement.style.display = 'block';
-
-    registerFormPasswordElement.type = 'text';
+loginShowPasswordElement.addEventListener('click', e => {
+    showPassword(loginShowPasswordElement, loginHidePasswordElement, loginFormPasswordElement);
 });
 
-hidePasswordElement.addEventListener('click', e => {
-    showPasswordElement.style.display = 'block';
-    hidePasswordElement.style.display = 'none';
-
-    registerFormPasswordElement.type = 'password';
+loginHidePasswordElement.addEventListener('click', e => {
+    hidePassword(loginShowPasswordElement, loginHidePasswordElement, loginFormPasswordElement);
 });
+
+registerShowPasswordElement.addEventListener('click', e => {
+    showPassword(
+        registerShowPasswordElement,
+        registerHidePasswordElement,
+        registerFormPasswordElement
+    );
+});
+
+registerHidePasswordElement.addEventListener('click', e => {
+    hidePassword(
+        registerShowPasswordElement,
+        registerHidePasswordElement,
+        registerFormPasswordElement
+    );
+});
+
+function showPassword(firstElement, secondElement, form) {
+    firstElement.style.display = 'none';
+    secondElement.style.display = 'block';
+
+    form.type = 'text';
+}
+
+function hidePassword(firstElement, secondElement, form) {
+    firstElement.style.display = 'block';
+    secondElement.style.display = 'none';
+
+    form.type = 'password';
+}

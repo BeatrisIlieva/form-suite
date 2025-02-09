@@ -30,16 +30,16 @@
         display: flex;
     }
 
-    & #show-password,
-    & #hide-password {
+    & #register-show-password,
+    & #register-hide-password {
         cursor: pointer;
     }
 
-    & #show-password {
+    & #register-show-password {
         display: block;
     }
 
-    & #hide-password {
+    & #register-hide-password {
         display: none;
     }
 
@@ -109,6 +109,7 @@
             font-size: 0.9em;
             opacity: 0.5;
             font-weight: 500;
+            letter-spacing: 0.03em;
         }
 
         & input[type='checkbox'] {

@@ -1,0 +1,21 @@
+.inner-wrapper {
+    & p {
+        opacity: 0.8;
+        font-weight: 300;
+        letter-spacing: 0.03em;
+        margin-top: -1em;
+    }
+
+    & #login-show-password,
+    & #login-hide-password {
+        cursor: pointer;
+    }
+
+    & #login-show-password {
+        display: block;
+    }
+
+    & #login-hide-password {
+        display: none;
+    }
+}

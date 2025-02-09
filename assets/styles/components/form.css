@@ -52,7 +52,6 @@
 
     & fieldset {
         border: none;
-
     }
 
     & form {
@@ -128,28 +127,21 @@
 
             &:not(:placeholder-shown):user-invalid {
                 & ~ .pattern-error {
-                    opacity: 1;
                     display: block;
                 }
 
                 & ~ .empty-field-error {
-                    opacity: 0;
                     display: none;
-
                 }
             }
 
             &:placeholder-shown:user-invalid {
                 & ~ .pattern-error {
-                    opacity: 0;
                     display: none;
-
                 }
 
                 & ~ .empty-field-error {
-                    opacity: 1;
                     display: block;
-
                 }
             }
 
@@ -189,7 +181,6 @@
             opacity: 0;
             display: none;
             font-size: 0.9em;
-            transition: opacity 0.3s ease-in-out;
         }
     }
 

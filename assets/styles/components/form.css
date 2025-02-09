@@ -60,7 +60,7 @@
         flex-direction: column;
 
         & > *:not(:last-child) {
-            margin-bottom: 2.2em;
+            margin-bottom: 1em;
         }
 
         &:has(:user-invalid) input[type='submit'] {
@@ -89,7 +89,6 @@
         flex-direction: column;
         position: relative;
         flex-grow: 1;
-        width: 100%;
 
         & label {
             color: var(--clr-black);
@@ -130,20 +129,27 @@
             &:not(:placeholder-shown):user-invalid {
                 & ~ .pattern-error {
                     opacity: 1;
+                    display: block;
                 }
 
                 & ~ .empty-field-error {
                     opacity: 0;
+                    display: none;
+
                 }
             }
 
             &:placeholder-shown:user-invalid {
                 & ~ .pattern-error {
                     opacity: 0;
+                    display: none;
+
                 }
 
                 & ~ .empty-field-error {
                     opacity: 1;
+                    display: block;
+
                 }
             }
 
@@ -179,12 +185,11 @@
         & .pattern-error,
         & .empty-field-error {
             color: var(--clr-red);
+            margin-top: 0.5em;
             opacity: 0;
+            display: none;
             font-size: 0.9em;
             transition: opacity 0.3s ease-in-out;
-            position: absolute;
-            left: 0.25em;
-            bottom: -1.6em;
         }
     }
 

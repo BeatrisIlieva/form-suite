@@ -14,24 +14,41 @@ document.addEventListener(
     true
 );
 
+const passwordMinLength = 6;
+
+const passwordValidationsMapper = {
+    validateLength: input => input.length >= passwordMinLength,
+    validateUpperCaseLetter: input => input.match(/[A-Z]{1,}/g),
+    validateLowerCaseLetter: input => input.match(/[a-z]{1,}/g),
+};
+
+function stylePasswordCriteriaRow(isValid, element) {
+    isValid ? element.classList.add('valid') : element.classList.remove('valid');
+}
+
 const registerFormPasswordElement = document.getElementById('register-password');
 
 registerFormPasswordElement.addEventListener('input', e => {
     const lengthCheckElement = document.querySelector('.password-criteria li:nth-child(1)');
-    const upperAndLowerCaseLetterCheckElement = document.querySelector(
+    const upperCaseLetterCheckElement = document.querySelector(
         '.password-criteria li:nth-child(2)'
     );
-    const numberCheckElement = document.querySelector('.password-criteria li:nth-child(3)');
-    const notSpacesCheckElement = document.querySelector('.password-criteria li:nth-child(4)');
-    const specialCharCheckElement = document.querySelector('.password-criteria li:nth-child(5)');
-
-    console.log(e.target.value);
+    const lowerCaseLetterCheckElement = document.querySelector(
+        '.password-criteria li:nth-child(3)'
+    );
+    const numberCheckElement = document.querySelector('.password-criteria li:nth-child(4)');
+    const notSpacesCheckElement = document.querySelector('.password-criteria li:nth-child(5)');
+    const specialCharCheckElement = document.querySelector('.password-criteria li:nth-child(6)');
 
     const inputValue = e.target.value;
 
-    if (inputValue.length >= 6) {
-        lengthCheckElement.classList.add("valid"); // Toggle valid class
-    } else {
-        lengthCheckElement.classList.remove("valid");
-    }
+    const passwordHasMinLength = passwordValidationsMapper.validateLength(inputValue);
+    stylePasswordCriteriaRow(passwordHasMinLength, lengthCheckElement)
+
+    const passwordContainsUpperCaseLetter = passwordValidationsMapper.validateUpperCaseLetter(inputValue);
+    stylePasswordCriteriaRow(passwordContainsUpperCaseLetter, upperCaseLetterCheckElement)
+
+    const passwordContainsLowerCaseLetter = passwordValidationsMapper.validateLowerCaseLetter(inputValue);
+    stylePasswordCriteriaRow(passwordContainsLowerCaseLetter, lowerCaseLetterCheckElement)
+
 });

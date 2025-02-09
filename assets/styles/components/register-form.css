@@ -1,17 +1,26 @@
 .register-form {
-    & .password-validation-scale {
+    &:has(input[type='password']:not(:placeholder-shown)) .password-validation-scale,
+    &:has(input[type='password']:not(:placeholder-shown)) .password-criteria {
         display: flex;
+    }
+
+    & .password-validation-scale {
+        display: none;
         gap: 0.2rem;
 
         & li {
             flex-grow: 1;
-            background: var(--clr-green);
+            background: var(--clr-light-gray);
             height: 0.4rem;
+
+            &.valid {
+                background: var(--clr-green);
+            }
         }
     }
 
     & .password-criteria {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         gap: 0.25em;
@@ -45,7 +54,7 @@
             &.valid::before {
                 display: none;
             }
-        
+
             &.valid::after {
                 display: inline-block;
             }

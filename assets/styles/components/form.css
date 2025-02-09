@@ -167,7 +167,7 @@
         & .empty-field-error {
             color: var(--clr-red);
             opacity: 0;
-            font-size: 0.8em;
+            font-size: 0.9em;
             transition: opacity 0.3s ease-in-out;
             position: absolute;
             left: 0.25em;

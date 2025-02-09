@@ -1,4 +1,45 @@
 .register-form {
+    & .password-validation-scale {
+        display: flex;
+        gap: 0.2rem;
+
+        & li {
+            flex-grow: 1;
+            background: var(--clr-green);
+            height: 0.4rem;
+        }
+    }
+
+    & .password-criteria {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+        font-size: 0.9em;
+
+        & li {
+            position: relative;
+            display: flex;
+            left: 1.15em;
+        }
+
+        & li::before,
+        & li::after {
+            position: absolute;
+            left: -1.15em;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        & li::before {
+            content: '\2713';
+        }
+
+        & li::after {
+            content: '\2717';
+        }
+    }
+
     & .terms-wrapper {
         display: flex;
         align-items: center;

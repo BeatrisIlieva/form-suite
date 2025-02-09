@@ -9,5 +9,6 @@
 @import url(components/form.css);
 @import url(components/register-form.css);
 @import url(components/login-form.css);
+@import url(components/shipping-info-form.css);
 
 @import url(pages/home.css);

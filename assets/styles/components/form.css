@@ -10,7 +10,7 @@
     }
 
     & .media {
-        flex: 0 1 50%;
+        flex: 0 0 50%;
         box-shadow: 0.5em 0 0.9em 0 rgb(0, 0, 0, 0.9);
         display: flex;
         position: relative;
@@ -44,7 +44,7 @@
 
 .form .inner-wrapper {
     margin: 3em;
-    flex-grow: 1;
+    flex: 1 1 50%;
 
     @media (max-width: 820px) {
         margin: 2em;
@@ -52,7 +52,7 @@
 
     & fieldset {
         border: none;
-        flex-grow: 1;
+
     }
 
     & form {

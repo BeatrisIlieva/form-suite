@@ -1,0 +1,76 @@
+<section class="layout-item form shipping-info-form" id="shipping-info-form">
+    <div class="outer-wrapper">
+        <div class="media">
+            <img src="assets/images/login.jpg" alt="flowers">
+        </div>
+        
+        <div class="inner-wrapper">
+            <fieldset>
+                
+                <legend>
+                    <span>Shipping Information</span>
+                    <span>john.doe@mail.com</span>
+                </legend>
+                
+                <form action="#" method="POST">
+                    <div class="field">
+                        <input type="text" name="shipping-info-first-name" id="shipping-info-first-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
+                        <label for="shipping-info-first-name">First Name</label>
+                        <span class="empty-field-error">Please enter your first name</span>
+                        <span class="pattern-error">Please enter a valid name</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="shipping-info-last-name" id="shipping-info-last-name" placeholder="Last Name" required pattern="^(?!\s*$).+$">
+                        <label for="shipping-info-last-name">Last Name</label>
+                        <span class="empty-field-error">Please enter your last name</span>
+                        <span class="pattern-error">Please enter a valid name</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required pattern="^[0-9]{9,}$">
+                        <label for="phone">Phone Number</label>
+                        <span class="empty-field-error">Please enter your phone number</span>
+                        <span class="pattern-error">Please enter a valid phone number</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="street" id="street" placeholder="Street Address" required pattern="^(?!\s*$).{5,}$">
+                        <label for="street">Street</label>
+                        <span class="empty-field-error">Please enter your street address</span>
+                        <span class="pattern-error">Please enter a valid street address</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="apartment" id="apartment" placeholder="Street Address" pattern="^(?!\s*$).{2,}$">
+                        <label for="apartment">Apartment</label>
+                        <span class="pattern-error">Please enter a valid apartment</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="city" id="city" placeholder="City" required pattern="^(?!\s*$).{2,}$">
+                        <label for="city">City</label>
+                        <span class="empty-field-error">Please enter your city</span>
+                        <span class="pattern-error">Please enter a valid city</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="country" id="country" placeholder="Country" required pattern="^(?!\s*$).{4,}$">
+                        <label for="country">Country</label>
+                        <span class="empty-field-error">Please enter your country</span>
+                        <span class="pattern-error">Please enter a valid country</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="zip-code" id="zip-code" placeholder="ZIP Code" required pattern="^(?!\s*$).{3,}$">
+                        <label for="zip-code">ZIP Code</label>
+                        <span class="empty-field-error">Please enter your ZIP Code</span>
+                        <span class="pattern-error">Please enter a valid ZIP Code</span>
+                    </div>
+                    
+                    <input class="btn" type="submit" value="Continue Checkout">
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</section>

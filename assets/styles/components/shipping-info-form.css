@@ -23,7 +23,7 @@
         & form {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap !important;
+            flex-wrap: wrap;
             column-gap: 1em;
 
             & .field:nth-child(1),
@@ -38,6 +38,43 @@
             & .field:nth-child(5),
             & .field:nth-child(8) {
                 flex: 1 0 100%;
+            }
+
+            & .btn {
+                flex: 1 1 100%;
+            }
+
+            & .delivery-wrapper {
+                margin-top: 1.5em;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                & .radio-field {
+                    display: flex;
+                    gap: 0.5em;
+                    background: var(--clr-extra-light-gray);
+                    align-items: center;
+                    padding: 1em;
+
+                    & input[type='radio'] {
+                        appearance: none;
+                        width: 1.5em;
+                        aspect-ratio: 1/1;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        background: var(--clr-white);
+                        border: 0.1em solid var(--clr-black);
+                        align-self: flex-start;
+
+                        /* &::before */
+                    }
+
+                    & label {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
             }
         }
     }

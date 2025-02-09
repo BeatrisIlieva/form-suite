@@ -4,6 +4,19 @@
         display: flex;
     }
 
+    & #show-password,
+    & #hide-password {
+        cursor: pointer;
+    }
+
+    & #show-password {
+        display: block;
+    }
+
+    & #hide-password {
+        display: none;
+    }
+
     & .password-validation-scale {
         display: none;
         gap: 0.2rem;

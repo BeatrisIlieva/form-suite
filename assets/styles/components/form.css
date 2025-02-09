@@ -47,6 +47,11 @@
         margin: 0 auto 2em auto;
     }
 
+    & .back-wrapper {
+        display: flex;
+        gap: 0.25em;
+    }
+
     & fieldset {
         border: none;
         flex: 0 1 50%;
@@ -195,7 +200,7 @@
 
         &:hover {
             background: var(--clr-blue);
-            text-shadow: 0 0 1em #000;
+            text-shadow: 0 0 1em var(--clr-black);
         }
     }
 }

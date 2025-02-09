@@ -57,16 +57,12 @@
                     align-items: center;
                     padding: 1em;
 
-                    & input[type='radio'],
-                    &::before {
-                        aspect-ratio: 1/1;
-                        border-radius: 50%;
-                        overflow: hidden;
-                    }
-
                     & input[type='radio'] {
                         appearance: none;
                         width: 1.25em;
+                        aspect-ratio: 1/1;
+                        border-radius: 50%;
+                        overflow: hidden;
                         background: var(--clr-white);
                         border: 0.1em solid var(--clr-black);
                         align-self: flex-start;
@@ -74,13 +70,16 @@
 
                         &::before {
                             content: '';
-                            position: absolute;
                             width: 0.9em;
+                            aspect-ratio: inherit;
+                            border-radius: inherit;
+                            overflow: inherit;
                             background: var(--clr-black);
                             opacity: 0;
                             left: 50%;
                             top: 50%;
                             transform: translate(-50%, -50%);
+                            position: absolute;
                         }
 
                         &:checked::before {

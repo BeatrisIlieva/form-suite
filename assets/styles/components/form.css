@@ -1,14 +1,18 @@
+.form:nth-of-type(even) {
+    & .media {
+        order: 2;
+    }
+}
+
 .form .outer-wrapper {
     display: flex;
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
     border-radius: 0.2em;
     overflow: hidden;
     justify-content: space-between;
-    gap: 3em;
 
     @media (max-width: 820px) {
         flex-direction: column;
-        gap: 2em;
     }
 
     & .media {
@@ -41,11 +45,11 @@
 }
 
 .form .inner-wrapper {
-    margin: 3em 3em 3em 0;
+    margin: 3em;
     flex-grow: 1;
 
     @media (max-width: 820px) {
-        margin: 0 auto 2em auto;
+        margin: 2em;
     }
 
     & fieldset {

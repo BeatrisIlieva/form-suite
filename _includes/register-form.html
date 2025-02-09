@@ -11,19 +11,22 @@
                     <input type="email" name="register-email" id="register-email" placeholder="Email" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
                     <label for="register-email">Email</label>
                     <i class="fa-solid fa-envelope"></i>
-                    <span class="error-message">Please enter a valid email address</span>
+                    <span class="empty-field-error">Please enter your email address</span>
+                    <span class="pattern-error">Please enter a valid email address</span>
                 </div>
                 
                 <div class="field">
-                    <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                    <input type="text" name="first-name" id="first-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
                     <label for="first-name">First Name</label>
-                    <span class="error-message">Please enter your first name</span>
+                    <span class="empty-field-error">Please enter your first name</span>
+                    <span class="pattern-error">Please enter your first name</span>
                 </div>
                 
                 <div class="field">
-                    <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                    <input type="text" name="last-name" id="last-name" placeholder="Last Name" required pattern="^(?!\s*$).+$">
                     <label for="last-name">First Name</label>
-                    <span class="error-message">Please enter your last name</span>
+                    <span class="empty-field-error">Please enter your last name</span>
+                    <span class="pattern-error">Please enter your last name</span>
                 </div>
                 
                 <div class="field">
@@ -31,7 +34,7 @@
                     <label for="register-password">Password</label>
                     <i class="fa-solid fa-eye-slash"></i>
                     <span class="empty-field-error">Please enter a password</span>
-                    <span class="error-message">Please enter a password that meets the required criteria</span>
+                    <span class="pattern-error">Please enter a password that meets the required criteria</span>
                 </div>
                 
                 <input type="submit" value="Register">

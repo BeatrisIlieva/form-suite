@@ -73,7 +73,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-bottom: 0.25em;
+        margin-bottom: 2.2em;
 
         & label {
             color: var(--clr-black);
@@ -103,14 +103,16 @@
                 color: transparent;
             }
 
+            &:user-invalid {
+                border-color: var(--clr-red);
+
+                & ~ label {
+                    color: var(--clr-red);
+                }
+            }
+
             &:not(:placeholder-shown):user-invalid {
-                border-color: var(--clr-red);
-
-                & ~ label {
-                    color: var(--clr-red);
-                }
-
-                & ~ .error-message {
+                & ~ .pattern-error {
                     opacity: 1;
                 }
 
@@ -119,28 +121,13 @@
                 }
             }
 
-            &:placeholder-shown:user-invalid  {
-                border-color: var(--clr-red);
-
-                & ~ label {
-                    color: var(--clr-red);
-                }
-                
-                & ~ .error-message {
+            &:placeholder-shown:user-invalid {
+                & ~ .pattern-error {
                     opacity: 0;
                 }
 
                 & ~ .empty-field-error {
                     opacity: 1;
-                }
-            }
-
-
-            &:user-valid {
-                border-color: var(--clr-green);
-
-                & ~ label {
-                    color: var(--clr-green);
                 }
             }
 
@@ -149,6 +136,14 @@
 
                 & ~ label {
                     color: var(--clr-yellow);
+                }
+            }
+
+            &:user-valid {
+                border-color: var(--clr-green);
+
+                & ~ label {
+                    color: var(--clr-green);
                 }
             }
 
@@ -165,22 +160,15 @@
             }
         }
 
-        & .error-message {
-            color: var(--clr-red);
-            opacity: 0;
-            font-size: 0.8em;
-            padding-left: 0.25em;
-            transition: opacity 0.3s ease-out;
-            margin-bottom: 0.5em;
-        }
-
+        & .pattern-error,
         & .empty-field-error {
             color: var(--clr-red);
             opacity: 0;
             font-size: 0.8em;
-            padding-left: 0.25em;
             transition: opacity 0.3s ease-out;
-            margin-bottom: 0.5em;
+            position: absolute;
+            left: 0.25em;
+            bottom: -1.6em;
         }
     }
 

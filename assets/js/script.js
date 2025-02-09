@@ -26,4 +26,12 @@ registerFormPasswordElement.addEventListener('input', e => {
     const specialCharCheckElement = document.querySelector('.password-criteria li:nth-child(5)');
 
     console.log(e.target.value);
+
+    const inputValue = e.target.value;
+
+    if (inputValue.length >= 6) {
+        lengthCheckElement.classList.add("valid"); // Toggle valid class
+    } else {
+        lengthCheckElement.classList.remove("valid");
+    }
 });

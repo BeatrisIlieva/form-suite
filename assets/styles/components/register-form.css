@@ -1,4 +1,8 @@
 .register-form {
+    & .media {
+        height: 140dvh;
+    }
+
     &:has(#register-password:not(:placeholder-shown)) .password-validation-scale,
     &:has(#register-password:not(:placeholder-shown)) .password-criteria {
         display: flex;

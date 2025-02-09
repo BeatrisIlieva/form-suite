@@ -1,0 +1,36 @@
+<section class="layout-item form register-form">
+    <div class="outer-wrapper">
+        <div class="media">
+            <img src="assets/images/register.jpg" alt="cream">
+        </div>
+        
+        <div class="inner-wrapper">
+            
+            <fieldset>
+                <legend>Welcome Back</legend>
+                <p>Please sign in to access your account.</p>
+                
+                <form action="#" method="POST">
+                    <div class="field">
+                        <input type="email" name="login-email" id="login-email" placeholder="Email" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <label for="login-email">Email</label>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="empty-field-error">Please enter your email address</span>
+                        <span class="pattern-error">Your email or password is incorrect.</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="password" name="login-password" id="login-password" placeholder="Password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!#$%])[A-Za-z0-9!#$£€%]{6,}$">
+                        <label for="login-password">Password</label>
+                        <i id="show-password" class="fa-solid fa-eye-slash"></i>
+                        <i id="hide-password" class="fa-solid fa-eye"></i>
+                        <span class="empty-field-error">Please enter a password</span>
+                        <span class="pattern-error">Your email or password is incorrect.</span>
+                    </div>
+                    
+                    <input type="submit" value="Register">
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</section>

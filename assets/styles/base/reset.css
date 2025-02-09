@@ -39,3 +39,9 @@ details {
     cursor: pointer;
 }
 
+input[type='checkbox'],
+input[type='radio'],
+input[type='checkbox'] ~ label,
+input[type='radio'] ~ label {
+    cursor: pointer;
+}

@@ -7,5 +7,6 @@
 @import url(general/site-footer.css);
 
 @import url(components/form.css);
+@import url(components/register-form.css);
 
 @import url(pages/home.css);

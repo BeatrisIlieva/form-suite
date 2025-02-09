@@ -1,3 +1,49 @@
 .register-form {
+    & .terms-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
 
+        input[type='checkbox'] {
+            appearance: none;
+            position: relative;
+            width: 1.4em;
+            aspect-ratio: 1/1;
+            border: 0.15em solid var(--clr-light-gray);
+            z-index: 0;
+            border-radius: 0.1em;
+        }
+
+        input[type='checkbox']::after,
+        input[type='checkbox']::before {
+            position: absolute;
+            opacity: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        input[type='checkbox']::after {
+            content: '';
+            background: var(--clr-black);
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        input[type='checkbox']::before {
+            content: '\2713';
+            color: var(--clr-white);
+            font-size: 1em;
+            z-index: 2;
+        }
+
+        input[type='checkbox']:checked::before {
+            opacity: 1;
+        }
+
+        input[type='checkbox']:checked::after {
+            opacity: 1;
+        }
+    }
 }

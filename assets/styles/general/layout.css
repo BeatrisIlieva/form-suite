@@ -12,5 +12,5 @@ main {
 }
 
 .layout-item {
-    padding: 0 max(calc((100vw - 1000px) / 2), 1dvh);
+    padding: 0 max(calc((100vw - 1200px) / 2), 1dvh);
 }

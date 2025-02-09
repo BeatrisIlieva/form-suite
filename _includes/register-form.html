@@ -1,67 +1,70 @@
 <section class="layout-item form register-form">
-    <div class="wrapper">
+    <div class="outer-wrapper">
         <div class="media">
             <img src="assets/images/register.jpg" alt="">
         </div>
-        <fieldset>
-            <legend>Create Account</legend>
-            
-            <form action="#" method="POST">
-                <div class="field">
-                    <input type="email" name="register-email" id="register-email" placeholder="Email" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
-                    <label for="register-email">Email</label>
-                    <i class="fa-solid fa-envelope"></i>
-                    <span class="empty-field-error">Please enter your email address</span>
-                    <span class="pattern-error">Please enter a valid email address</span>
-                </div>
+        
+        <div class="inner-wrapper">
+            <fieldset>
+                <legend>Create Account</legend>
                 
-                <div class="field">
-                    <input type="text" name="first-name" id="first-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
-                    <label for="first-name">First Name</label>
-                    <span class="empty-field-error">Please enter your first name</span>
-                    <span class="pattern-error">Please enter your first name</span>
-                </div>
-                
-                <div class="field">
-                    <input type="text" name="last-name" id="last-name" placeholder="Last Name" required pattern="^(?!\s*$).+$">
-                    <label for="last-name">First Name</label>
-                    <span class="empty-field-error">Please enter your last name</span>
-                    <span class="pattern-error">Please enter your last name</span>
-                </div>
-                
-                <div class="field">
-                    <input type="password" name="register-password" id="register-password" placeholder="Password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!#$%])[A-Za-z0-9!#$£€%]{6,}$">
-                    <label for="register-password">Password</label>
-                    <i id="show-password" class="fa-solid fa-eye-slash"></i>
-                    <i id="hide-password" class="fa-solid fa-eye"></i>
-                    <span class="empty-field-error">Please enter a password</span>
-                    <span class="pattern-error">Please enter a password that meets the required criteria</span>
-                </div>
-                
-                <ul class="password-validation-scale">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                
-                <ul class="password-criteria">
-                    <li>Must be at least 6 characters in length</li>
-                    <li>Must contain at least one upper case letter</li>
-                    <li>Must contain at least one lower case letter</li>
-                    <li>Must contain at least one number</li>
-                    <li>Must not contain spaces</li>
-                    <li>Must contain at least one special character (!#$%)</li>
-                </ul>
-                
-                <div class="terms-wrapper">
-                    <input type="checkbox" name="agree" id="agree" required>
-                    <label for="agree">By creating an account, you agree to receive email updates</label>
-                </div>
-                <input type="submit" value="Register">
-            </form>
-        </fieldset>
+                <form action="#" method="POST">
+                    <div class="field">
+                        <input type="email" name="register-email" id="register-email" placeholder="Email" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <label for="register-email">Email</label>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="empty-field-error">Please enter your email address</span>
+                        <span class="pattern-error">Please enter a valid email address</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="first-name" id="first-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
+                        <label for="first-name">First Name</label>
+                        <span class="empty-field-error">Please enter your first name</span>
+                        <span class="pattern-error">Please enter your first name</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="last-name" id="last-name" placeholder="Last Name" required pattern="^(?!\s*$).+$">
+                        <label for="last-name">First Name</label>
+                        <span class="empty-field-error">Please enter your last name</span>
+                        <span class="pattern-error">Please enter your last name</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="password" name="register-password" id="register-password" placeholder="Password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!#$%])[A-Za-z0-9!#$£€%]{6,}$">
+                        <label for="register-password">Password</label>
+                        <i id="show-password" class="fa-solid fa-eye-slash"></i>
+                        <i id="hide-password" class="fa-solid fa-eye"></i>
+                        <span class="empty-field-error">Please enter a password</span>
+                        <span class="pattern-error">Please enter a password that meets the required criteria</span>
+                    </div>
+                    
+                    <ul class="password-validation-scale">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    
+                    <ul class="password-criteria">
+                        <li>Must be at least 6 characters in length</li>
+                        <li>Must contain at least one upper case letter</li>
+                        <li>Must contain at least one lower case letter</li>
+                        <li>Must contain at least one number</li>
+                        <li>Must not contain spaces</li>
+                        <li>Must contain at least one special character (!#$%)</li>
+                    </ul>
+                    
+                    <div class="terms-wrapper">
+                        <input type="checkbox" name="agree" id="agree" required>
+                        <label for="agree">By creating an account, you agree to receive email updates</label>
+                    </div>
+                    <input type="submit" value="Register">
+                </form>
+            </fieldset>
+        </div>
     </div>
 </section>

@@ -49,7 +49,19 @@
 
     & .back-wrapper {
         display: flex;
+        align-items: center;
         gap: 0.25em;
+        opacity: 0.6;
+        font-weight: 500;
+
+        & a {
+            font-variant-caps: all-small-caps;
+            color: inherit;
+        }
+
+        & i {
+            margin-top: 0.16em;
+        }
     }
 
     & fieldset {

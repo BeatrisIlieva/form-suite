@@ -40,6 +40,10 @@
                 font-variant-caps: all-small-caps;
             }
 
+            & h3 {
+                margin-bottom: 0.25em;
+            }
+
             & h6 {
                 font-weight: 500;
                 opacity: 0.8;

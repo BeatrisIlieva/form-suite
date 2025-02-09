@@ -3,6 +3,28 @@
         height: 140dvh;
     }
 
+    & header {
+        display: flex;
+        align-items: center;
+        gap: 0.25em;
+        opacity: 0.6;
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+        border-bottom: 0.1em solid var(--clr-medium-gray);
+
+        & a {
+            font-variant-caps: all-small-caps;
+            color: inherit;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            font-size: 1.1em;
+        }
+
+        & i {
+            margin-top: 0.16em;
+        }
+    }
+
     &:has(#register-password:not(:placeholder-shown)) .password-validation-scale,
     &:has(#register-password:not(:placeholder-shown)) .password-criteria {
         display: flex;

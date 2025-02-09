@@ -20,6 +20,7 @@ const passwordValidationsMapper = {
     validateLength: input => input.length >= passwordMinLength,
     validateUpperCaseLetter: input => input.match(/[A-Z]{1,}/g),
     validateLowerCaseLetter: input => input.match(/[a-z]{1,}/g),
+    validateNumber: input => input.match(/[0-9]{1,}/g),
 };
 
 function stylePasswordCriteriaRow(isValid, element) {
@@ -43,12 +44,16 @@ registerFormPasswordElement.addEventListener('input', e => {
     const inputValue = e.target.value;
 
     const passwordHasMinLength = passwordValidationsMapper.validateLength(inputValue);
-    stylePasswordCriteriaRow(passwordHasMinLength, lengthCheckElement)
+    stylePasswordCriteriaRow(passwordHasMinLength, lengthCheckElement);
 
-    const passwordContainsUpperCaseLetter = passwordValidationsMapper.validateUpperCaseLetter(inputValue);
-    stylePasswordCriteriaRow(passwordContainsUpperCaseLetter, upperCaseLetterCheckElement)
+    const passwordContainsUpperCaseLetter =
+        passwordValidationsMapper.validateUpperCaseLetter(inputValue);
+    stylePasswordCriteriaRow(passwordContainsUpperCaseLetter, upperCaseLetterCheckElement);
 
-    const passwordContainsLowerCaseLetter = passwordValidationsMapper.validateLowerCaseLetter(inputValue);
-    stylePasswordCriteriaRow(passwordContainsLowerCaseLetter, lowerCaseLetterCheckElement)
+    const passwordContainsLowerCaseLetter =
+        passwordValidationsMapper.validateLowerCaseLetter(inputValue);
+    stylePasswordCriteriaRow(passwordContainsLowerCaseLetter, lowerCaseLetterCheckElement);
 
+    const passwordContainsNumber = passwordValidationsMapper.validateNumber(inputValue);
+    stylePasswordCriteriaRow(passwordContainsNumber, numberCheckElement);
 });

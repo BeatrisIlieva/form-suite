@@ -246,7 +246,7 @@ const cardNumberInputElement = document.getElementById('card-number');
 
 const visaCardStartDigit = 4;
 
-paymentCardsMapper = {
+const paymentCardsMapper = {
     4: {
         pattern: '^4[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}$',
     },
@@ -270,9 +270,19 @@ cardNumberInputElement.addEventListener('input', e => {
     previousLength = cardNumberValue.length;
 
     const firstDigit = Number(cardNumberValue[0]);
-    if (firstDigit === visaCardStartDigit) {
-        cardNumberInputElement.pattern = '^4[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}$';
+    const firstTwoDigits = Number(cardNumberValue.substring(0, 2));
+    const firstThreeDigits = Number(cardNumberValue.substring(0, 3));
+
+    let pattern;
+    if (paymentCardsMapper.hasOwnProperty(firstDigit)) {
+        pattern = paymentCardsMapper[firstDigit].pattern;
+    } else if (paymentCardsMapper.hasOwnProperty(firstTwoDigits)) {
+        pattern = paymentCardsMapper[firstTwoDigits].pattern;
+    } else if (paymentCardsMapper.hasOwnProperty(firstThreeDigits)) {
+        pattern = paymentCardsMapper[firstThreeDigits].pattern;
     }
+
+    cardNumberInputElement.pattern = pattern;
 
     const cursorPosition = cardNumberInputElement.selectionStart;
 

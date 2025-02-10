@@ -70,17 +70,23 @@
                     
                     <div class="delivery-wrapper">
                         <div class="radio-field">
-                            <input type="radio" name="delivery-choice" id="overnight">
+                            <input type="radio" name="delivery-choice" id="overnight" required checked>
                             <label for="overnight">
-                                <span>Overnight</span>
+                                <span class="flex-container">
+                                    <span>Overnight</span>
+                                    <span>Complimentary</span>
+                                </span>
                                 <span>Order today for delivery on <time datetime="2055-10-08">2055/10/08.</time></span>
                             </label>
                         </div>
                         
                         <div class="radio-field">
-                            <input type="radio" name="delivery-choice" id="2-day">
+                            <input type="radio" name="delivery-choice" id="2-day" required>
                             <label for="2-day">
-                                <span>Overnight</span>
+                                <span class="flex-container">
+                                    <span>2-day</span>
+                                    <span>Complimentary</span>
+                                </span>
                                 <span>Order today for delivery on <time datetime="2055-10-10">2055/10/10</time></span>
                             </label>
                         </div>

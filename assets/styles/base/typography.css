@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/tisa-sans-pro');
 
 html {
-    font: clamp(14px, 9px + 0.4dvw, 22px) / 1.5 'Tisa Sans Pro', sans-serif;
+    font: clamp(14px, 8px + 0.45dvw, 20px) / 1.5 'Tisa Sans Pro', sans-serif;
     letter-spacing: 0.063em;
 }
 

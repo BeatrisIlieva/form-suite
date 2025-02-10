@@ -49,6 +49,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
+                flex-grow: 1;
 
                 & .radio-field {
                     display: flex;
@@ -56,6 +57,7 @@
                     background: var(--clr-extra-light-gray);
                     align-items: center;
                     padding: 1em;
+                    transition: background 0.3s ease-in-out;
 
                     & input[type='radio'] {
                         appearance: none;
@@ -67,6 +69,7 @@
                         border: 0.1em solid var(--clr-black);
                         align-self: flex-start;
                         position: relative;
+                        transition: background 0.3s ease-in-out;
 
                         &::before {
                             content: '';
@@ -80,18 +83,49 @@
                             top: 50%;
                             transform: translate(-50%, -50%);
                             position: absolute;
+                            transition: opacity 0.3s ease-in-out;
                         }
 
                         &:checked::before {
                             opacity: 1;
+                        }
+
+                        &:user-invalid {
+                            border-color: var(--clr-red);
+
+                            & ~ label {
+                                color: var(--clr-red);
+                            }
                         }
                     }
 
                     & label {
                         display: flex;
                         flex-direction: column;
+                        font-size: 0.9em;
+                        flex-grow: 1;
+                        gap: 0.25em;
+                        letter-spacing: 0.01em;
+
+                        & .flex-container {
+                            display: flex;
+                            justify-content: space-between;
+
+                            & span:nth-child(1) {
+                                margin-right: auto;
+                            }
+                        }
+
+                        & > span:nth-child(2) {
+                            opacity: 0.6;
+                        }
                     }
                 }
+            }
+
+            & .radio-field:has(input[type='radio']:checked) {
+                background: var(--clr-white);
+                border: 0.1em solid var(--clr-medium-gray);
             }
         }
     }

@@ -228,18 +228,45 @@ const cardNumberInputElement = document.getElementById('card-number');
 // })
 
 const visaCardStartDigit = 4;
-const visaCardNumberLength = 16;
+const visaCardNumberLengthPlusWhiteSpaces = 19;
 const visaCardCVVLength = 3;
 
-cardNumberInputElement.addEventListener('input', e => {
-    const cardNumberValue = cardNumberInputElement.value;
+// cardNumberInputElement.addEventListener('input', e => {
+//     const cardNumberValue = cardNumberInputElement.value;
 
+//     const firstDigit = Number(cardNumberValue[0]);
+
+//     if (firstDigit === visaCardStartDigit) {
+//         // cardNumberInputElement.pattern = '^4[0-9]{3}[0-9]{4}[0-9]{4}[0-9]{4}$';
+//         cardNumberInputElement.pattern = '^4[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}$';
+//         cardNumberInputElement.maxLength = visaCardNumberLengthPlusWhiteSpaces;
+//     }
+
+//     let value = cardNumberValue.replace(/\D/g, '');
+//     let formattedValue = '';
+
+//     for (let i = 0; i < value.length; i++) {
+//         if (i > 0 && i % 4 === 0) {
+//             formattedValue += ' ';
+//         }
+//         formattedValue += value[i];
+//     }
+
+//     cardNumberInputElement.value = formattedValue;
+// });
+
+cardNumberInputElement.addEventListener('input', e => {
+    let previousLength;
+    const cardNumberValue = cardNumberInputElement.value;
+    previousLength = cardNumberValue.length;
     const firstDigit = Number(cardNumberValue[0]);
 
     if (firstDigit === visaCardStartDigit) {
-        cardNumberInputElement.pattern = '^4[0-9]{15}$';
-        cardNumberInputElement.maxLength = visaCardNumberLength;
+        cardNumberInputElement.pattern = '^4[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}$';
+        cardNumberInputElement.maxLength = visaCardNumberLengthPlusWhiteSpaces;
     }
+
+    const cursorPosition = cardNumberInputElement.selectionStart;
 
     let value = cardNumberValue.replace(/\D/g, '');
     let formattedValue = '';
@@ -252,4 +279,20 @@ cardNumberInputElement.addEventListener('input', e => {
     }
 
     cardNumberInputElement.value = formattedValue;
+
+    let newCursorPosition;
+
+    if (previousLength > formattedValue.length) {
+        newCursorPosition = cursorPosition - 1;
+        console.log('yes');
+    } else if (previousLength < formattedValue.length) {
+        newCursorPosition = formattedValue.length;
+    } else if (previousLength === formattedValue.length) {
+        newCursorPosition = cursorPosition;
+    } else {
+        console.log(previousLength, formattedValue.length);
+        newCursorPosition = cursorPosition + 1;
+    }
+
+    cardNumberInputElement.setSelectionRange(newCursorPosition, newCursorPosition);
 });

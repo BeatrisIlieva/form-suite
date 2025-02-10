@@ -206,7 +206,6 @@ cardDetailsFormSubmitElement.addEventListener('click', e => {
         expiryMonthSelectElement.classList.remove('invalid');
         expiryYearSelectElement.classList.remove('invalid');
         expiredCardErrorMessageElement.style.display = 'none';
-
     }
 });
 
@@ -221,3 +220,36 @@ function validateExpiryDate(expiryMonth, expiryYear) {
         return true;
     }
 }
+
+const cardNumberInputElement = document.getElementById('card-number');
+
+// cardDetailsFormSubmitElement.addEventListener('click', e => {
+
+// })
+
+const visaCardStartDigit = 4;
+const visaCardNumberLength = 16;
+const visaCardCVVLength = 3;
+
+cardNumberInputElement.addEventListener('input', e => {
+    const cardNumberValue = cardNumberInputElement.value;
+
+    const firstDigit = Number(cardNumberValue[0]);
+
+    if (firstDigit === visaCardStartDigit) {
+        cardNumberInputElement.pattern = '^4[0-9]{15}$';
+        cardNumberInputElement.maxLength = visaCardNumberLength;
+    }
+
+    let value = cardNumberValue.replace(/\D/g, '');
+    let formattedValue = '';
+
+    for (let i = 0; i < value.length; i++) {
+        if (i > 0 && i % 4 === 0) {
+            formattedValue += ' ';
+        }
+        formattedValue += value[i];
+    }
+
+    cardNumberInputElement.value = formattedValue;
+});

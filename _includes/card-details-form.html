@@ -27,7 +27,7 @@
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="card-holder" id="card-holder" placeholder="Name on card" required>
+                        <input type="text" name="card-holder" id="card-holder" placeholder="Name on card" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="card-holder">Name on card</label>
                         <span class="empty-field-error">Please enter the name as it appears on the credit card</span>
                         <span class="pattern-error">Please enter a valid name</span>

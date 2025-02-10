@@ -189,6 +189,7 @@ function createExpiryDateDropdownContent(selectElement, valueToIncrement) {
 const cardDetailsFormSubmitElement = document.querySelector(
     '#card-details-form input[type="submit"]'
 );
+const expiredCardErrorMessageElement = document.querySelector('.expired-card-error-message');
 
 cardDetailsFormSubmitElement.addEventListener('click', e => {
     const expiryMonth = expiryMonthSelectElement.value;
@@ -199,9 +200,13 @@ cardDetailsFormSubmitElement.addEventListener('click', e => {
     if (hasCardExpired) {
         expiryMonthSelectElement.classList.add('invalid');
         expiryYearSelectElement.classList.add('invalid');
+
+        expiredCardErrorMessageElement.style.display = 'block';
     } else {
         expiryMonthSelectElement.classList.remove('invalid');
         expiryYearSelectElement.classList.remove('invalid');
+        expiredCardErrorMessageElement.style.display = 'none';
+
     }
 });
 

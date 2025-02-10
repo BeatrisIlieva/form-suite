@@ -34,14 +34,23 @@
             } */
 
             & .field:nth-child(1),
-            & .field:nth-child(2) {
+            & .field:nth-child(2),
+            & .field:nth-child(5) {
                 flex: 1 1 100%;
             }
 
             & .field:nth-child(3),
-            & .field:nth-child(4),
-            & .field:nth-child(5){
-                flex: 1 1 30%;
+            & .field:nth-child(4){
+                flex: 1 1 45%;
+            }
+
+            & .expired-card-error-message {
+                color: var(--clr-red);
+                margin: 0.5em 0 0.1em 0;
+                display: none;
+                font-size: 0.9em;
+                width: 200%;
+            
             }
 
             & .btn {

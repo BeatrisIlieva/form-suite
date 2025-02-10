@@ -20,14 +20,14 @@
                 <form action="#" class="payment" method="POST">
                     
                     <div class="field">
-                        <input type="text" name="card-number" id="card-number" placeholder="Card Number" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <input type="text" name="card-number" id="card-number" placeholder="Card Number" required>
                         <label for="card-number">Card Number</label>
                         <span class="empty-field-error">Please enter your card number</span>
                         <span class="pattern-error">Please enter a valid card number</span>
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="card-holder" id="card-holder" placeholder="Name on card" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <input type="text" name="card-holder" id="card-holder" placeholder="Name on card" required>
                         <label for="card-holder">Name on card</label>
                         <span class="empty-field-error">Please enter the name as it appears on the credit card</span>
                         <span class="pattern-error">Please enter a valid name</span>
@@ -47,12 +47,12 @@
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="cvv-code" id="cvv-code" placeholder="CVV" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <input type="text" name="cvv-code" id="cvv-code" placeholder="CVV" required>
                         <label for="cvv-code">CVV</label>
                         <span class="empty-field-error">Please enter your card’s 3- or 4-digit security code</span>
                         <span class="pattern-error">Please enter a valid security code</span>
                     </div>
-
+                    
                     <input class="btn" type="submit" value="Place Order $3,800">
                 </form>
             </fieldset>

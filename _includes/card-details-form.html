@@ -34,27 +34,28 @@
                     </div>
                     
                     <div class="field">
-                        <select name="expiry-month" id="expiry-month" class="field" required>
+                        <select name="expiry-month" id="expiry-month" required>
+                        </select>
+                        <label for="expiry-month">MM</label>
+                    </div>
+                    
+                    <div class="field">
+                        <select name="expiry-year" id="expiry-year" required>
                             <option value="" hidden></option>
                             <option value="">1</option>
                             <option value="">2</option>
                         </select>
-                        <label for="expiry-month">MM</label>
+                        <label for="expiry-year">YY</label>
                     </div>
-                        
-                        <select name="expiry-month" id="expiry-year" class="field" required>
-                            <option value="">YY</option>
-                        </select>
-                        
-                        <div class="field">
-                            <input type="text" name="cvv-code" id="cvv-code" placeholder="CVV" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
-                            <label for="cvv-code">CVV</label>
-                            <span class="empty-field-error">Please enter your card’s 3- or 4-digit security code</span>
-                            <span class="pattern-error">Please enter a valid security code</span>
-                        </div>
-                    </form>
-                </fieldset>
-            </div>
+                    
+                    <div class="field">
+                        <input type="text" name="cvv-code" id="cvv-code" placeholder="CVV" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <label for="cvv-code">CVV</label>
+                        <span class="empty-field-error">Please enter your card’s 3- or 4-digit security code</span>
+                        <span class="pattern-error">Please enter a valid security code</span>
+                    </div>
+                </form>
+            </fieldset>
         </div>
-    </section>
-    
+    </div>
+</section>

@@ -151,3 +151,29 @@ function hidePassword(firstElement, secondElement, form) {
 
     form.type = 'password';
 }
+
+const expiryYearSelectElement = document.getElementById('expiry-year');
+const expiryMonthSelectElement = document.getElementById('expiry-month');
+const monthYearLimit = 12;
+
+expiryMonthSelectElement.addEventListener('focus', e => {
+    expiryMonthSelectElement.innerText = '';
+    const emptyOption = document.createElement('option');
+    emptyOption.setAttribute('hidden', true);
+    expiryMonthSelectElement.appendChild(emptyOption);
+
+    for (let i = 1; i <= monthYearLimit; i++) {
+        const optionElement = document.createElement('option');
+
+        optionElement.value = i;
+        optionElement.textContent = i;
+        expiryMonthSelectElement.appendChild(optionElement);
+    }
+});
+
+function validateExpiryDate() {
+    const date = new Date();
+
+    const currentMonth = date.getMonth() + 1;
+    const currentYear = date.getFullYear();
+}

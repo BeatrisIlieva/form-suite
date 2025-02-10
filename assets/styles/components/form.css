@@ -176,6 +176,11 @@
             }
         }
 
+        & select:valid ~ label{
+            top: 0.3em;
+            font-size: 0.7em;
+        }
+
         & .pattern-error,
         & .empty-field-error {
             color: var(--clr-red);

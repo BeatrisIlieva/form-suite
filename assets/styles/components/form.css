@@ -104,7 +104,8 @@
             transition: color 0.3s ease-in-out, top 0.3s ease-in-out;
         }
 
-        & input {
+        & input,
+        & select {
             outline: none;
             border: 0.08em solid var(--clr-black);
             border-radius: 0.1em;
@@ -160,16 +161,18 @@
                 }
             }
 
-            &:focus ~ label,
-            &:not(:placeholder-shown) ~ label {
-                top: 0.3em;
-                font-size: 0.7em;
-            }
-
             &:required ~ label::after {
                 content: '*';
                 color: var(--clr-blue);
                 padding-left: 0.05em;
+            }
+        }
+
+        & input {
+            &:focus ~ label,
+            &:not(:placeholder-shown) ~ label {
+                top: 0.3em;
+                font-size: 0.7em;
             }
         }
 

@@ -38,11 +38,14 @@
             & .field:nth-child(4),
             & .field:nth-child(5){
                 flex: 1 1 30%;
-                align-self: stretch;
             }
 
             & .btn {
                 flex: 1 1 100%;
+            }
+
+            & textarea {
+
             }
         }
     }

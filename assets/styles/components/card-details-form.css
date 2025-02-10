@@ -22,5 +22,28 @@
                 font-size: 1.6em;
             }
         }
+
+        & form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 1em;
+
+            & .field:nth-child(1),
+            & .field:nth-child(2) {
+                flex: 1 1 100%;
+            }
+
+            & .field:nth-child(3),
+            & .field:nth-child(4),
+            & .field:nth-child(5){
+                flex: 1 1 30%;
+                align-self: stretch;
+            }
+
+            & .btn {
+                flex: 1 1 100%;
+            }
+        }
     }
 }

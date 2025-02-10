@@ -11,7 +11,9 @@ html {
 *::before,
 *::after,
 button,
-blockquote {
+blockquote,
+select,
+textarea {
     box-sizing: inherit;
     font: inherit;
 }

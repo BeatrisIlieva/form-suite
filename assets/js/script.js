@@ -171,8 +171,7 @@ expiryMonthSelectElement.addEventListener('change', e => {
     const expiryYear = expiryYearSelectElement.value;
 
     const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
-    toggleExpiredCardStyles(hasCardExpired)
-
+    toggleExpiredCardStyles(hasCardExpired);
 });
 
 expiryYearSelectElement.addEventListener('focus', e => {
@@ -184,8 +183,7 @@ expiryYearSelectElement.addEventListener('change', e => {
     const expiryYear = expiryYearSelectElement.value;
 
     const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
-    toggleExpiredCardStyles(hasCardExpired)
-
+    toggleExpiredCardStyles(hasCardExpired);
 });
 
 function createExpiryDateDropdownContent(selectElement, valueToIncrement) {
@@ -247,8 +245,24 @@ function validateExpiryDate(expiryMonth, expiryYear) {
 const cardNumberInputElement = document.getElementById('card-number');
 
 const visaCardStartDigit = 4;
-const visaCardNumberLengthPlusWhiteSpaces = 19;
-const visaCardCVVLength = 3;
+
+paymentCardsMapper = {
+    4: {
+        pattern: '^4[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}$',
+    },
+    51: {
+        pattern: '^51[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4}$',
+    },
+    55: {
+        pattern: '^55[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4}$',
+    },
+    222: {
+        pattern: '^222[0-9]{1} [0-9]{4} [0-9]{4} [0-9]{4}$',
+    },
+    27: {
+        pattern: '^27[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4}$',
+    },
+};
 
 cardNumberInputElement.addEventListener('input', e => {
     let previousLength;
@@ -258,7 +272,6 @@ cardNumberInputElement.addEventListener('input', e => {
     const firstDigit = Number(cardNumberValue[0]);
     if (firstDigit === visaCardStartDigit) {
         cardNumberInputElement.pattern = '^4[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}$';
-        cardNumberInputElement.maxLength = visaCardNumberLengthPlusWhiteSpaces;
     }
 
     const cursorPosition = cardNumberInputElement.selectionStart;

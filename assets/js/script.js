@@ -154,26 +154,37 @@ function hidePassword(firstElement, secondElement, form) {
 
 const expiryYearSelectElement = document.getElementById('expiry-year');
 const expiryMonthSelectElement = document.getElementById('expiry-month');
+
 const monthYearLimit = 12;
 
+const date = new Date();
+
+const currentMonth = date.getMonth() + 1;
+const currentYear = date.getFullYear();
+
 expiryMonthSelectElement.addEventListener('focus', e => {
-    expiryMonthSelectElement.innerText = '';
-    const emptyOption = document.createElement('option');
-    emptyOption.setAttribute('hidden', true);
-    expiryMonthSelectElement.appendChild(emptyOption);
-
-    for (let i = 1; i <= monthYearLimit; i++) {
-        const optionElement = document.createElement('option');
-
-        optionElement.value = i;
-        optionElement.textContent = i;
-        expiryMonthSelectElement.appendChild(optionElement);
-    }
+    createExpiryDateDropdownContent(expiryMonthSelectElement, 1);
 });
 
-function validateExpiryDate() {
-    const date = new Date();
+expiryYearSelectElement.addEventListener('focus', e => {
+    createExpiryDateDropdownContent(expiryYearSelectElement, Number(currentYear));
+});
 
-    const currentMonth = date.getMonth() + 1;
-    const currentYear = date.getFullYear();
+function createExpiryDateDropdownContent(selectElement, valueToIncrement) {
+    const monthYearLimit = 12;
+
+    selectElement.innerText = '';
+    const emptyOption = document.createElement('option');
+    emptyOption.setAttribute('hidden', true);
+    selectElement.appendChild(emptyOption);
+
+    for (let i = 0; i < monthYearLimit; i++) {
+        const optionElement = document.createElement('option');
+
+        optionElement.value = valueToIncrement + i;
+        optionElement.textContent = valueToIncrement + i;
+        selectElement.appendChild(optionElement);
+    }
 }
+
+function validateExpiryDate() {}

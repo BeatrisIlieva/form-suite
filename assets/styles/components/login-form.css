@@ -23,7 +23,7 @@
         & form {
             margin-bottom: 3em;
             padding-bottom: 3em;
-            border-bottom: 0.1em solid var(--clr-medium-gray);
+            border-bottom: 0.1rem solid var(--clr-medium-gray);
         }
 
         & footer {

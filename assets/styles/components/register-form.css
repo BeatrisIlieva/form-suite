@@ -6,7 +6,7 @@
         opacity: 0.6;
         margin-bottom: 2em;
         padding-bottom: 2em;
-        border-bottom: 0.1em solid var(--clr-medium-gray);
+        border-bottom: 0.1rem solid var(--clr-medium-gray);
 
         & a {
             font-variant-caps: all-small-caps;

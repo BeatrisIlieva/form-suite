@@ -176,9 +176,17 @@
             }
         }
 
-        & select:valid ~ label{
+        & select:valid ~ label {
             top: 0.3em;
             font-size: 0.7em;
+        }
+
+        & select:valid {
+            border-color: var(--clr-green);
+
+            & ~ label {
+                color: var(--clr-green);
+            }
         }
 
         & .pattern-error,
@@ -216,6 +224,14 @@
     & a.btn:hover {
         background: var(--clr-blue);
         text-shadow: 0 0 1em var(--clr-black);
+    }
+}
+
+.form .inner-wrapper form .field select.invalid {
+    border-color: var(--clr-red);
+
+    & ~ label {
+        color: var(--clr-red);
     }
 }
 

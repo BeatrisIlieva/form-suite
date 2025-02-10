@@ -152,8 +152,8 @@ function hidePassword(firstElement, secondElement, form) {
     form.type = 'password';
 }
 
-const expiryYearSelectElement = document.getElementById('expiry-year');
 const expiryMonthSelectElement = document.getElementById('expiry-month');
+const expiryYearSelectElement = document.getElementById('expiry-year');
 
 const monthYearLimit = 12;
 
@@ -161,13 +161,12 @@ const date = new Date();
 
 const currentMonth = date.getMonth() + 1;
 const currentYear = date.getFullYear();
-
 expiryMonthSelectElement.addEventListener('focus', e => {
     createExpiryDateDropdownContent(expiryMonthSelectElement, 1);
 });
 
 expiryYearSelectElement.addEventListener('focus', e => {
-    createExpiryDateDropdownContent(expiryYearSelectElement, Number(currentYear));
+    createExpiryDateDropdownContent(expiryYearSelectElement, currentYear);
 });
 
 function createExpiryDateDropdownContent(selectElement, valueToIncrement) {
@@ -187,4 +186,33 @@ function createExpiryDateDropdownContent(selectElement, valueToIncrement) {
     }
 }
 
-function validateExpiryDate() {}
+const cardDetailsFormSubmitElement = document.querySelector(
+    '#card-details-form input[type="submit"]'
+);
+
+cardDetailsFormSubmitElement.addEventListener('click', e => {
+    const expiryMonth = expiryMonthSelectElement.value;
+    const expiryYear = expiryYearSelectElement.value;
+
+    const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
+
+    if (hasCardExpired) {
+        expiryMonthSelectElement.classList.add('invalid');
+        expiryYearSelectElement.classList.add('invalid');
+    } else {
+        expiryMonthSelectElement.classList.remove('invalid');
+        expiryYearSelectElement.classList.remove('invalid');
+    }
+});
+
+function validateExpiryDate(expiryMonth, expiryYear) {
+    if (expiryYear < currentYear) {
+        return true;
+    } else if (expiryYear > currentYear) {
+        return false;
+    } else if (expiryMonth > currentMonth) {
+        return false;
+    } else {
+        return true;
+    }
+}

@@ -161,12 +161,31 @@ const date = new Date();
 
 const currentMonth = date.getMonth() + 1;
 const currentYear = date.getFullYear();
+
 expiryMonthSelectElement.addEventListener('focus', e => {
     createExpiryDateDropdownContent(expiryMonthSelectElement, 1);
 });
 
+expiryMonthSelectElement.addEventListener('change', e => {
+    const expiryMonth = expiryMonthSelectElement.value;
+    const expiryYear = expiryYearSelectElement.value;
+
+    const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
+    toggleExpiredCardStyles(hasCardExpired)
+
+});
+
 expiryYearSelectElement.addEventListener('focus', e => {
     createExpiryDateDropdownContent(expiryYearSelectElement, currentYear);
+});
+
+expiryYearSelectElement.addEventListener('change', e => {
+    const expiryMonth = expiryMonthSelectElement.value;
+    const expiryYear = expiryYearSelectElement.value;
+
+    const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
+    toggleExpiredCardStyles(hasCardExpired)
+
 });
 
 function createExpiryDateDropdownContent(selectElement, valueToIncrement) {
@@ -197,6 +216,10 @@ cardDetailsFormSubmitElement.addEventListener('click', e => {
 
     const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
 
+    toggleExpiredCardStyles(hasCardExpired);
+});
+
+function toggleExpiredCardStyles(hasCardExpired) {
     if (hasCardExpired) {
         expiryMonthSelectElement.classList.add('invalid');
         expiryYearSelectElement.classList.add('invalid');
@@ -207,7 +230,7 @@ cardDetailsFormSubmitElement.addEventListener('click', e => {
         expiryYearSelectElement.classList.remove('invalid');
         expiredCardErrorMessageElement.style.display = 'none';
     }
-});
+}
 
 function validateExpiryDate(expiryMonth, expiryYear) {
     if (expiryYear < currentYear) {
@@ -231,8 +254,8 @@ cardNumberInputElement.addEventListener('input', e => {
     let previousLength;
     const cardNumberValue = cardNumberInputElement.value;
     previousLength = cardNumberValue.length;
-    const firstDigit = Number(cardNumberValue[0]);
 
+    const firstDigit = Number(cardNumberValue[0]);
     if (firstDigit === visaCardStartDigit) {
         cardNumberInputElement.pattern = '^4[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}$';
         cardNumberInputElement.maxLength = visaCardNumberLengthPlusWhiteSpaces;

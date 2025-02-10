@@ -13,7 +13,6 @@
                     <span>
                         <i class="fa-brands fa-cc-mastercard"></i>
                         <i class="fa-brands fa-cc-visa"></i>
-                        <i class="fa-brands fa-cc-amex"></i>
                     </span>
                 </legend>
                 
@@ -47,7 +46,7 @@
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="cvv-code" id="cvv-code" placeholder="CVV" required>
+                        <input type="text" name="cvv-code" id="cvv-code" placeholder="CVV" required maxlength="3" pattern="[0-9]{3}">
                         <label for="cvv-code">CVV</label>
                         <span class="empty-field-error">Please enter your card’s 3- or 4-digit security code</span>
                         <span class="pattern-error">Please enter a valid security code</span>

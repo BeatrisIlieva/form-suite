@@ -1,15 +1,39 @@
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: 1em;
+    box-shadow: 0 0.1em 0.4em 0 rgb(0, 0, 0, 0.2);
+    padding-top: 3em;
+    padding-bottom: 1em;
+    margin-bottom: 3em;
 
-    & span {
-        color: var(--clr-blue);
-    }
-
-    & nav ul {
+    & .wrapper-top {
         display: flex;
-        gap: 1em;
+        justify-content: space-between;
+        align-items: baseline;
+        opacity: 0.9;
+
+        & h1 {
+            line-height: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        & span {
+            color: #737373;
+        }
+
+        & nav ul {
+            display: flex;
+            gap: 2em;
+            font-size: 1.1em;
+
+            & a {
+                color: #737373;
+                font-weight: 500;
+                font-variant-caps: all-small-caps;
+
+                &:hover {
+                    color: var(--clr-black);
+                }
+            }
+        }
     }
 }

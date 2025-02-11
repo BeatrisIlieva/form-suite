@@ -1,0 +1,44 @@
+aside.site-layout {
+    display: flex;
+    justify-content: center;
+
+    & p {
+        max-width: 86ch;
+        text-align: center;
+        line-height: 2;
+        position: relative;
+        margin-bottom: 5em;
+        margin-top: 2em;
+        padding-bottom: 2em;
+        padding-top: 2em;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 7rem;
+            height: 0.07rem;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            background: #737373;
+            display: block;
+            opacity: 0.6;
+        }
+
+        &::before {
+            bottom: calc(100% - 0.08rem);
+        }
+
+        &::after {
+            top: calc(100% + 0.08rem);
+        }
+
+        & strong {
+            opacity: 0.7;
+        }
+
+        & em {
+            font-weight: 500;
+        }
+    }
+}

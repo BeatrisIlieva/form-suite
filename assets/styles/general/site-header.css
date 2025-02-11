@@ -17,6 +17,7 @@ header.layout-item.site-header {
         opacity: 0.9;
         flex-wrap: wrap;
         row-gap: 2em;
+        align-content: center;
 
         & h1 {
             line-height: 0;

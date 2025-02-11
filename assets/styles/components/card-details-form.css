@@ -14,7 +14,7 @@
             width: 100%;
             font-variant-caps: normal;
 
-            & span:nth-child(1) {
+            & > span:nth-child(1) {
                 margin-right: auto;
             }
 
@@ -40,7 +40,7 @@
             }
 
             & .field:nth-child(3),
-            & .field:nth-child(4){
+            & .field:nth-child(4) {
                 flex: 1 1 45%;
             }
 
@@ -50,13 +50,18 @@
                 display: none;
                 font-size: 0.9em;
                 width: 200%;
-            
             }
 
             & .btn {
                 flex: 1 1 100%;
             }
 
+            & .field #visa-card-icon,
+            & #master-card-icon {
+                display: none;
+                font-size: 2em;
+                top: 0.4em;
+            }
         }
     }
 }

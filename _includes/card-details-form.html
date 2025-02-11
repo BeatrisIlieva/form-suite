@@ -19,10 +19,16 @@
                 <form action="#" class="payment" method="POST">
                     
                     <div class="field">
-                        <input type="text" name="card-number" id="card-number" placeholder="Card Number" required maxlength="16">
+                        <input type="text" name="card-number" id="card-number" placeholder="Card Number" required maxlength="19">
                         <label for="card-number">Card Number</label>
-                        <span class="empty-field-error">Please enter your card number</span>
-                        <span class="pattern-error">Please enter a valid card number</span>
+                        <span id="master-card-icon media">
+                            <img src="" alt="">
+                        </span>
+                        <span id="visa-card-icon media">
+                            <img src="" alt="">
+                        </span>
+                        <i id="master-card-icon" class="fa-brands fa-cc-mastercard"></i>
+                        <i id="visa-card-icon" class="fa-brands fa-cc-visa"></i>
                     </div>
                     
                     <div class="field">

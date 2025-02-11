@@ -244,23 +244,48 @@ function validateExpiryDate(expiryMonth, expiryYear) {
 
 const cardNumberInputElement = document.getElementById('card-number');
 
-const visaCardStartDigit = 4;
+const visaCardIconElement = document.getElementById('visa-card-icon');
+const masterCardIconElement = document.getElementById('master-card-icon');
+
+function displayVisaCardIconElement() {
+    visaCardIconElement.style.display = 'inline-block';
+    masterCardIconElement.style.display = 'none';
+}
+
+function displayMasterCardIconElement() {
+    visaCardIconElement.style.display = 'none';
+    masterCardIconElement.style.display = 'inline-block';
+}
+
+function hideCardIconElements() {
+    visaCardIconElement.style.display = 'none';
+    masterCardIconElement.style.display = 'none';
+}
 
 const paymentCardsMapper = {
     4: {
         pattern: '^4[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}$',
+        displayCardFunction: displayVisaCardIconElement,
     },
     51: {
         pattern: '^51[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4}$',
+        displayCardFunction: displayMasterCardIconElement,
     },
     55: {
         pattern: '^55[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4}$',
+        displayCardFunction: displayMasterCardIconElement,
     },
     222: {
         pattern: '^222[0-9]{1} [0-9]{4} [0-9]{4} [0-9]{4}$',
+        displayCardFunction: displayMasterCardIconElement,
+    },
+    227: {
+        pattern: '^227[0-9]{1} [0-9]{4} [0-9]{4} [0-9]{4}$',
+        displayCardFunction: displayMasterCardIconElement,
     },
     27: {
         pattern: '^27[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4}$',
+        displayCardFunction: displayMasterCardIconElement,
     },
 };
 
@@ -276,10 +301,15 @@ cardNumberInputElement.addEventListener('input', e => {
     let pattern;
     if (paymentCardsMapper.hasOwnProperty(firstDigit)) {
         pattern = paymentCardsMapper[firstDigit].pattern;
+        paymentCardsMapper[firstDigit].displayCardFunction();
     } else if (paymentCardsMapper.hasOwnProperty(firstTwoDigits)) {
         pattern = paymentCardsMapper[firstTwoDigits].pattern;
+        paymentCardsMapper[firstTwoDigits].displayCardFunction();
     } else if (paymentCardsMapper.hasOwnProperty(firstThreeDigits)) {
         pattern = paymentCardsMapper[firstThreeDigits].pattern;
+        paymentCardsMapper[firstThreeDigits].displayCardFunction();
+    } else {
+        hideCardIconElements();
     }
 
     cardNumberInputElement.pattern = pattern;

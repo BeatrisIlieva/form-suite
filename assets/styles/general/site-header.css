@@ -36,4 +36,12 @@
             }
         }
     }
+
+    .hidden {
+        transform: translateY(-100%);
+    }
+
+    .visible {
+        transform: translateY(0);
+    }
 }

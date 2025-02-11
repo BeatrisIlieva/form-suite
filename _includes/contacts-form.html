@@ -1,0 +1,38 @@
+<section class="layout-item form card-details-form" id="card-details-form">
+    <div class="outer-wrapper">
+        <div class="media">
+            <img src="assets/images/card-details.jpg" alt="flowers">
+        </div>
+        
+        <div class="inner-wrapper">
+            <h2>Payment</h2>
+            
+            <fieldset>
+                <legend>Contact Us</legend>
+                
+                <form action="#" method="POST">
+                    <div class="field">
+                        <input type="text" name="contact-first-name" id="contact-first-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
+                        <label for="contact-first-name">Name</label>
+                        <span class="empty-field-error">Please enter your name</span>
+                        <span class="pattern-error">Please enter a valid name</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="email" name="contact-email" id="contact-email" placeholder="Email" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <label for="contact-email">Email</label>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="empty-field-error">Please enter your email address</span>
+                        <span class="pattern-error">Please enter a valid email address</span>
+                    </div>
+                    
+                    <textarea name="message" id="message" class="field" rows="8" placeholder="Message"></textarea>
+                    
+                    <input class="btn" type="submit" value="Submit">
+                    
+                </form>
+                
+            </fieldset>
+        </div>
+    </div>
+</section>

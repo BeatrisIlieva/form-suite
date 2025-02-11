@@ -29,10 +29,6 @@
             flex-wrap: wrap;
             column-gap: 1em;
 
-            & select {
-                appearance: none;
-            }
-
             & .field:nth-child(1),
             & .field:nth-child(2),
             & .field:nth-child(5) {

@@ -10,14 +10,14 @@
                 
                 <form action="#" method="POST">
                     <div class="field">
-                        <input type="text" name="contact-first-name" id="contact-first-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
+                        <input type="text" name="contact-first-name" id="contact-first-name" placeholder="First Name" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="contact-first-name">First Name</label>
                         <span class="empty-field-error">Please enter your first name</span>
                         <span class="pattern-error">Please enter a valid name</span>
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="contact-last-name" id="contact-last-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
+                        <input type="text" name="contact-last-name" id="contact-last-name" placeholder="First Name" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="contact-last-name">Last Name</label>
                         <span class="empty-field-error">Please enter your last name</span>
                         <span class="pattern-error">Please enter a valid name</span>

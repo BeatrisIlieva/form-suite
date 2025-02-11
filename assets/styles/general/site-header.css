@@ -17,7 +17,14 @@ header.layout-item.site-header {
         opacity: 0.9;
         flex-wrap: wrap;
         row-gap: 2em;
-        align-content: center;
+
+        @media (max-width: 920px) {
+            justify-content: center;
+
+            & h1 {
+                margin-right: 0;
+            }
+        }
 
         & h1 {
             line-height: 0;
@@ -30,20 +37,12 @@ header.layout-item.site-header {
             color: #737373;
         }
 
-        & nav {
-            flex-grow: 1;
-        }
-
         & nav ul {
             display: flex;
             column-gap: 2em;
             row-gap: 0.5em;
             font-size: 1.1em;
             flex-wrap: wrap;
-
-            & li {
-                flex-grow: 1;
-            }
 
             & a {
                 color: #737373;

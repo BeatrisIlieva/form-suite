@@ -12,5 +12,5 @@ main {
 }
 
 .layout-item {
-    padding: 0 clamp(2dvh, calc((100dvw - 1805px) / 2), calc(100dvw / 2));
+    padding: 0 clamp(2dvh, calc((100dvw - 1200px) / 2), calc(100dvw / 2));
 }

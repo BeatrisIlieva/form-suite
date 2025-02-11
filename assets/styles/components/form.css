@@ -105,7 +105,8 @@
         }
 
         & input,
-        & select {
+        & select,
+        & textarea {
             outline: none;
             border: 0.08em solid var(--clr-black);
             border-radius: 0.1em;

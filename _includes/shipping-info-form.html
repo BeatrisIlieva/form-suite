@@ -62,7 +62,7 @@
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="zip-code" id="zip-code" placeholder="ZIP Code" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
+                        <input type="text" name="zip-code" id="zip-code" placeholder="ZIP Code" required pattern="^[A-Za-z0-9\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="zip-code">ZIP Code</label>
                         <span class="empty-field-error">Please enter your ZIP Code</span>
                         <span class="pattern-error">Please enter a valid ZIP Code</span>
@@ -92,6 +92,8 @@
                         </div>
                     </div>
                     <input class="btn" type="submit" value="Continue Checkout">
+                    <p class="confirmation">Thank you! Your submission has been received successfully.</p>
+
                 </form>
             </fieldset>
         </div>

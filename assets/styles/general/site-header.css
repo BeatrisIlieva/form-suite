@@ -1,0 +1,15 @@
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1em;
+
+    & span {
+        color: var(--clr-blue);
+    }
+
+    & nav ul {
+        display: flex;
+        gap: 1em;
+    }
+}

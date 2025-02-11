@@ -11,8 +11,15 @@
                 <form action="#" method="POST">
                     <div class="field">
                         <input type="text" name="contact-first-name" id="contact-first-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
-                        <label for="contact-first-name">Name</label>
-                        <span class="empty-field-error">Please enter your name</span>
+                        <label for="contact-first-name">First Name</label>
+                        <span class="empty-field-error">Please enter your first name</span>
+                        <span class="pattern-error">Please enter a valid name</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="text" name="contact-last-name" id="contact-last-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
+                        <label for="contact-last-name">Last Name</label>
+                        <span class="empty-field-error">Please enter your last name</span>
                         <span class="pattern-error">Please enter a valid name</span>
                     </div>
                     
@@ -25,11 +32,31 @@
                     </div>
                     
                     <div class="field">
+                        <input type="email" name="retype-contact-email" id="retype-contact-email" placeholder="Email" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <label for="retype-contact-email">Confirm Email Address</label>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="empty-field-error">Please enter your email address</span>
+                        <span class="pattern-error">Please enter a valid email address</span>
+                    </div>
+                    
+                    <div class="field">
+                        <select name="general-inquiry" id="general-inquiry" required>
+                            <option value="" hidden></option>
+                            <option value="shipping">Shipping</option>
+                            <option value="returns">Returns/Exchanges</option>
+                            <option value="repairs">Repairs</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <label for="general-inquiry">General Inquiry</label>
+                    </div>
+                    
+                    <div class="field">
                         <textarea name="message" id="message"  rows="8" placeholder="Message" required></textarea>
                         <label for="message">Message</label>
                         <span class="empty-field-error">Please enter your message</span>
                     </div>
-
+                    
                     <input class="btn" type="submit" value="Submit">
                     
                 </form>

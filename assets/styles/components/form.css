@@ -87,76 +87,103 @@
         flex-direction: column;
         position: relative;
         flex-grow: 1;
-    }
 
-    & label {
-        color: var(--clr-black);
-        position: absolute;
-        top: 1.05em;
-        left: 1rem;
-        transition: color 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    & i {
-        color: var(--clr-black);
-        position: absolute;
-        top: 1.25em;
-        right: 0.75rem;
-        transition: color 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-    & input,
-    & select {
-        &::placeholder {
-            color: transparent;
-        }
-    }
-    & input,
-    & select,
-    & textarea {
-        outline: none;
-        border: 0.08em solid var(--clr-black);
-        border-radius: 0.1em;
-        transition: border-color 0.3s ease-in-out;
-        overflow: hidden;
-        padding: 1em;
-
-        &:user-invalid {
-            border-color: var(--clr-red);
-
-            & ~ label {
-                color: var(--clr-red);
-            }
+        & label {
+            color: var(--clr-black);
+            position: absolute;
+            top: 1.05em;
+            left: 1rem;
+            transition: color 0.3s ease-in-out, top 0.3s ease-in-out;
         }
 
-        &:not(:placeholder-shown):user-invalid {
-            & ~ .pattern-error {
-                display: block;
+        & i {
+            color: var(--clr-black);
+            position: absolute;
+            top: 1.25em;
+            right: 0.75rem;
+            transition: color 0.3s ease-in-out, top 0.3s ease-in-out;
+        }
+
+        & input,
+        & select,
+        & textarea {
+            outline: none;
+            border: 0.08em solid var(--clr-black);
+            border-radius: 0.1em;
+            transition: border-color 0.3s ease-in-out;
+            overflow: hidden;
+            padding: 1em;
+
+            &::placeholder {
+                color: transparent;
             }
 
-            & ~ .empty-field-error {
-                display: none;
+            &:user-invalid {
+                border-color: var(--clr-red);
+
+                & ~ label {
+                    color: var(--clr-red);
+                }
+            }
+
+            &:not(:placeholder-shown):user-invalid {
+                & ~ .pattern-error {
+                    display: block;
+                }
+
+                & ~ .empty-field-error {
+                    display: none;
+                }
+            }
+
+            &:placeholder-shown:user-invalid {
+                & ~ .pattern-error {
+                    display: none;
+                }
+
+                & ~ .empty-field-error {
+                    display: block;
+                }
+            }
+
+            &:focus {
+                border-color: var(--clr-yellow);
+
+                & ~ label {
+                    color: var(--clr-yellow);
+                }
+            }
+
+            &:not(:placeholder-shown):valid {
+                border-color: var(--clr-green);
+
+                & ~ label {
+                    color: var(--clr-green);
+                }
+            }
+
+            &:required ~ label::after {
+                content: '*';
+                color: var(--clr-blue);
+                padding-left: 0.05em;
             }
         }
 
-        &:placeholder-shown:user-invalid {
-            & ~ .pattern-error {
-                display: none;
-            }
-
-            & ~ .empty-field-error {
-                display: block;
-            }
-        }
-
-        &:focus {
-            border-color: var(--clr-yellow);
-
-            & ~ label {
-                color: var(--clr-yellow);
+        & input,
+        & textarea {
+            &:focus ~ label,
+            &:not(:placeholder-shown) ~ label {
+                top: 0.3em;
+                font-size: 0.7em;
             }
         }
 
-        &:not(:placeholder-shown):valid {
+        & select:valid ~ label {
+            top: 0.3em;
+            font-size: 0.7em;
+        }
+
+        & select:valid {
             border-color: var(--clr-green);
 
             & ~ label {
@@ -164,40 +191,13 @@
             }
         }
 
-        &:required ~ label::after {
-            content: '*';
-            color: var(--clr-blue);
-            padding-left: 0.05em;
+        & .pattern-error,
+        & .empty-field-error {
+            color: var(--clr-red);
+            margin: 0.5em 0 0.1em 0;
+            display: none;
+            font-size: 0.9em;
         }
-    }
-
-    & input {
-        &:focus ~ label,
-        &:not(:placeholder-shown) ~ label {
-            top: 0.3em;
-            font-size: 0.7em;
-        }
-    }
-
-    & select:valid ~ label {
-        top: 0.3em;
-        font-size: 0.7em;
-    }
-
-    & select:valid {
-        border-color: var(--clr-green);
-
-        & ~ label {
-            color: var(--clr-green);
-        }
-    }
-
-    & .pattern-error,
-    & .empty-field-error {
-        color: var(--clr-red);
-        margin: 0.5em 0 0.1em 0;
-        display: none;
-        font-size: 0.9em;
     }
 
     & .btn {
@@ -291,22 +291,7 @@
             }
         }
     }
-
-    & textarea::placeholder {
-        color: var(--clr-black);
-    }
 }
-
-/* textarea {
-    outline: none;
-    border: 0.08em solid var(--clr-black);
-    border-radius: 0.1em;
-    transition: border-color 0.3s ease-in-out;
-    overflow: hidden;
-    padding: 1em;
-}
-
-textarea::placeholder */
 
 .form .inner-wrapper form .field select.invalid {
     border-color: var(--clr-red) !important;

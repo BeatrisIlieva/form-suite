@@ -16,21 +16,16 @@ header.layout-item.site-header {
         align-items: baseline;
         opacity: 0.9;
         flex-wrap: wrap;
-        row-gap: 2em;
+        gap: 2em;
 
         @media (max-width: 920px) {
             justify-content: center;
-
-            & h1 {
-                margin-right: 0;
-            }
         }
 
         & h1 {
             line-height: 0;
             padding-bottom: 0;
             margin-bottom: 0;
-            margin-right: 2em;
         }
 
         & span {
@@ -43,6 +38,10 @@ header.layout-item.site-header {
             row-gap: 0.5em;
             font-size: 1.1em;
             flex-wrap: wrap;
+
+            @media (max-width: 920px) {
+                justify-content: center;
+            }
 
             & a {
                 color: #737373;

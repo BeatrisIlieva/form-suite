@@ -303,7 +303,8 @@
         font-size: 1.1em;
         text-decoration: underline;
         text-underline-offset: 0.4em;
-        text-decoration-color: var(--clr-black);
+        text-decoration-color: var(--clr-medium-gray);
+        margin-top: 0.5em;
     }
 }
 

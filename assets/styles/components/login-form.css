@@ -1,6 +1,6 @@
 .login-form {
     & .inner-wrapper {
-        & p {
+        & legend + p {
             opacity: 0.8;
             font-weight: 300;
             letter-spacing: 0.03em;

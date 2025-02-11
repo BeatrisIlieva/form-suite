@@ -298,6 +298,12 @@
 
     & .confirmation {
         display: none;
+        color: var(--clr-blue);
+        text-align: center;
+        font-size: 1.1em;
+        text-decoration: underline;
+        text-underline-offset: 0.4em;
+        text-decoration-color: var(--clr-black);
     }
 }
 

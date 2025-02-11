@@ -1,11 +1,17 @@
 footer.layout-item.site-footer {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+    flex-direction: column;
+    /* justify-content: baseline; */
+    align-items: center;
     padding: 2em;
     margin-top: 4em;
     box-shadow: 0 0.1em 0.4em 0 rgb(0, 0, 0, 0.2);
     gap: 0.5em;
+
+    & .wrapper {
+        display: flex;
+        gap: 0.5em;
+    }
 
     & p {
         opacity: 0.5;
@@ -19,7 +25,11 @@ footer.layout-item.site-footer {
         color: var(--clr-blue);
     }
 
+    & a span, & a i {
+        color: var(--clr-black);
+    }
+
     & span {
-        margin-left: -0.25em;
+        /* margin-left: -0.25em; */
     }
 }

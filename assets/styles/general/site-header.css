@@ -15,21 +15,34 @@ header.layout-item.site-header {
         justify-content: space-between;
         align-items: baseline;
         opacity: 0.9;
+        flex-wrap: wrap;
+        row-gap: 2em;
 
         & h1 {
             line-height: 0;
             padding-bottom: 0;
             margin-bottom: 0;
+            margin-right: 2em;
         }
 
         & span {
             color: #737373;
         }
 
+        & nav {
+            flex-grow: 1;
+        }
+
         & nav ul {
             display: flex;
-            gap: 2em;
+            column-gap: 2em;
+            row-gap: 0.5em;
             font-size: 1.1em;
+            flex-wrap: wrap;
+
+            & li {
+                flex-grow: 1;
+            }
 
             & a {
                 color: #737373;

@@ -18,4 +18,8 @@ footer.layout-item.site-footer {
     & a:visited {
         color: var(--clr-blue);
     }
+
+    & span {
+        margin-left: -0.25em;
+    }
 }

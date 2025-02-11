@@ -14,14 +14,14 @@
                 
                 <form action="#" method="POST">
                     <div class="field">
-                        <input type="text" name="shipping-info-first-name" id="shipping-info-first-name" placeholder="First Name" required pattern="^(?!\s*$).+$">
+                        <input type="text" name="shipping-info-first-name" id="shipping-info-first-name" placeholder="First Name" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="shipping-info-first-name">First Name</label>
                         <span class="empty-field-error">Please enter your first name</span>
                         <span class="pattern-error">Please enter a valid name</span>
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="shipping-info-last-name" id="shipping-info-last-name" placeholder="Last Name" required pattern="^(?!\s*$).+$">
+                        <input type="text" name="shipping-info-last-name" id="shipping-info-last-name" placeholder="Last Name" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="shipping-info-last-name">Last Name</label>
                         <span class="empty-field-error">Please enter your last name</span>
                         <span class="pattern-error">Please enter a valid name</span>
@@ -42,27 +42,27 @@
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="apartment" id="apartment" placeholder="Street Address" pattern="^(?!\s*$).{2,}$">
+                        <input type="text" name="apartment" id="apartment" placeholder="Apartment" pattern="^(?!\s*$).{1,}$">
                         <label for="apartment">Apartment</label>
                         <span class="pattern-error">Please enter a valid apartment</span>
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="city" id="city" placeholder="City" required pattern="^(?!\s*$).{2,}$">
+                        <input type="text" name="city" id="city" placeholder="City" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="city">City</label>
                         <span class="empty-field-error">Please enter your city</span>
                         <span class="pattern-error">Please enter a valid city</span>
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="country" id="country" placeholder="Country" required pattern="^(?!\s*$).{4,}$">
+                        <input type="text" name="country" id="country" placeholder="Country" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="country">Country</label>
                         <span class="empty-field-error">Please enter your country</span>
                         <span class="pattern-error">Please enter a valid country</span>
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="zip-code" id="zip-code" placeholder="ZIP Code" required pattern="^(?!\s*$).{3,}$">
+                        <input type="text" name="zip-code" id="zip-code" placeholder="ZIP Code" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
                         <label for="zip-code">ZIP Code</label>
                         <span class="empty-field-error">Please enter your ZIP Code</span>
                         <span class="pattern-error">Please enter a valid ZIP Code</span>

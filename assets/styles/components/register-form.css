@@ -21,6 +21,11 @@
         }
     }
 
+    & .email-updates {
+        opacity: 0.6;
+        margin-top: 0.5em;
+    }
+
     &:has(#register-password:not(:placeholder-shown)) .password-validation-scale,
     &:has(#register-password:not(:placeholder-shown)) .password-criteria {
         display: flex;

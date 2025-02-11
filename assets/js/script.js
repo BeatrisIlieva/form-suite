@@ -2,17 +2,26 @@ const submitElements = document.querySelectorAll('input[type="submit"]');
 
 submitElements.forEach(element => {
     element.addEventListener('click', e => {
+        const formElement = element.closest('form');
+
+        const invalidInputs = formElement.querySelectorAll(':invalid');
+
+        const formIsInvalid = invalidInputs.length > 0;
+
+        if (formIsInvalid) {
+            return;
+        }
+
         e.preventDefault();
 
         const confirmationElement = element.nextElementSibling;
 
-        confirmationElement.style.display = 'block'
+        confirmationElement.style.display = 'block';
 
-        const formElement = element.closest('form');
-        formElement.reset()
+        formElement.reset();
         console.log(formElement);
-    })
-})
+    });
+});
 
 document.addEventListener(
     'invalid',
@@ -359,5 +368,3 @@ cardNumberInputElement.addEventListener('input', e => {
 
     cardNumberInputElement.setSelectionRange(newCursorPosition, newCursorPosition);
 });
-
-

@@ -1,0 +1,11 @@
+.footer.site-layout.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+
+    & p {
+        opacity: 0.8;
+        font-style: italic;
+    }
+}

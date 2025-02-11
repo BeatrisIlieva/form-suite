@@ -2,7 +2,7 @@ let lastScrollY = 0;
 
 window.addEventListener('scroll', e => {
     const currentScrollY = window.scrollY;
-    const headerElement = document.querySelector('header.layout-item');
+    const headerElement = document.querySelector('header.layout-item.site-header');
 
     if (currentScrollY > 160 && currentScrollY > lastScrollY) {
         headerElement.classList.remove('visible');

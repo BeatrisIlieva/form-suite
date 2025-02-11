@@ -1,8 +1,14 @@
-.site-header {
+header.layout-item.site-header {
     box-shadow: 0 0.1em 0.4em 0 rgb(0, 0, 0, 0.2);
     padding-top: 3em;
     padding-bottom: 1em;
-    margin-bottom: 3em;
+    margin-bottom: 2.5em;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    transition: transform 0.3s ease-in-out;
+    background: var(--clr-white);
 
     & .wrapper-top {
         display: flex;
@@ -36,12 +42,12 @@
             }
         }
     }
+}
 
-    .hidden {
-        transform: translateY(-100%);
-    }
+.hidden {
+    transform: translateY(-100%);
+}
 
-    .visible {
-        transform: translateY(0);
-    }
+.visible {
+    transform: translateY(0);
 }

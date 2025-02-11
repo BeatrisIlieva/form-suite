@@ -196,6 +196,10 @@
             display: none;
             font-size: 0.9em;
         }
+
+        & #chevron-up {
+            display: none;
+        }
     }
 
     & .btn {

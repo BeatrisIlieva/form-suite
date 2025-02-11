@@ -295,6 +295,10 @@
             }
         }
     }
+
+    & .confirmation {
+        display: none;
+    }
 }
 
 .form .inner-wrapper form .field select.invalid {

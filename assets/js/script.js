@@ -1,3 +1,19 @@
+const submitElements = document.querySelectorAll('input[type="submit"]');
+
+submitElements.forEach(element => {
+    element.addEventListener('click', e => {
+        e.preventDefault();
+
+        const confirmationElement = element.nextElementSibling;
+
+        confirmationElement.style.display = 'block'
+
+        const formElement = element.closest('form');
+        formElement.reset()
+        console.log(formElement);
+    })
+})
+
 document.addEventListener(
     'invalid',
     (function () {

@@ -37,8 +37,7 @@
                     <div class="field">
                         <select name="expiry-month" id="expiry-month" required>
                         </select>
-                        <i id="chevron-down-month" class="fa-solid fa-chevron-down"></i>
-                        <i id="chevron-up-month" class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-down"></i>
                         <label for="expiry-month">MM</label>
                         <span class="expired-card-error-message">Please enter a valid expiration date</span>
                     </div>
@@ -46,8 +45,7 @@
                     <div class="field">
                         <select name="expiry-year" id="expiry-year" required>
                         </select>
-                        <i id="chevron-down-year" class="fa-solid fa-chevron-down"></i>
-                        <i id="chevron-up-year" class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-down"></i>
                         <label for="expiry-year">YY</label>
                     </div>
                     
@@ -56,6 +54,18 @@
                         <label for="cvv-code">CVV</label>
                         <span class="empty-field-error">Please enter your card’s 3- or 4-digit security code</span>
                         <span class="pattern-error">Please enter a valid security code</span>
+                    </div>
+                    
+                    <div class="checkboxes-wrapper">
+                        <div class="terms-wrapper">
+                            <input type="checkbox" name="agree" id="agree">
+                            <label for="agree-save-credit-card">Save Card to Account</label>
+                        </div>
+                        
+                        <div class="terms-wrapper">
+                            <input type="checkbox" name="agree" id="agree">
+                            <label for="agree-billing-shipping-address-are-same">Billing Address is same as shipping address</label>
+                        </div>
                     </div>
                     
                     <input class="btn" type="submit" value="Place Order $3,800">

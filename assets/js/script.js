@@ -343,3 +343,5 @@ cardNumberInputElement.addEventListener('input', e => {
 
     cardNumberInputElement.setSelectionRange(newCursorPosition, newCursorPosition);
 });
+
+

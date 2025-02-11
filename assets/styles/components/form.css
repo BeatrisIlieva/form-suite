@@ -196,10 +196,6 @@
             display: none;
             font-size: 0.9em;
         }
-
-        & #chevron-up {
-            display: none;
-        }
     }
 
     & .btn {
@@ -229,13 +225,78 @@
         background: var(--clr-blue);
         text-shadow: 0 0 1em var(--clr-black);
     }
+
+
+    & .terms-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        margin-top: 1em;
+
+        & label {
+            opacity: 0.5;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        & input[type='checkbox'] {
+            appearance: none;
+            position: relative;
+            width: 1.4em;
+            aspect-ratio: 1/1;
+            border: 0.15em solid var(--clr-light-gray);
+            z-index: 0;
+            border-radius: 0.1em;
+            align-self: flex-start;
+
+            &:user-invalid {
+                border-color: var(--clr-red);
+
+                & ~ label {
+                    color: var(--clr-red);
+                }
+            }
+
+            &::after,
+            &::before {
+                position: absolute;
+                opacity: 0;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            &::after {
+                content: '';
+                background: var(--clr-black);
+                width: 100%;
+                aspect-ratio: 1/1;
+            }
+
+            &::before {
+                content: '\2713';
+                color: var(--clr-white);
+                font-size: 1em;
+                z-index: 2;
+            }
+
+            &:checked::before {
+                opacity: 1;
+            }
+
+            &:checked::after {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .form .inner-wrapper form .field select.invalid {
-    border-color: var(--clr-red);
+    border-color: var(--clr-red) !important;
 
     & ~ label {
-        color: var(--clr-red);
+        color: var(--clr-red) !important;
     }
 }
 

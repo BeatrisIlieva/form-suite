@@ -108,6 +108,21 @@
                 color: transparent;
             }
 
+            &:required ~ label::after {
+                content: '*';
+                color: $clr-blue;
+                padding-left: 0.05em;
+            }
+        }
+
+        & input,
+        & textarea {
+            &:focus ~ label,
+            &:not(:placeholder-shown) ~ label {
+                top: 0.3em;
+                font-size: 0.7em;
+            }
+
             &:not(:placeholder-shown):invalid {
                 border-color: $clr-red;
 
@@ -158,21 +173,6 @@
                     display: none;
                 }
             }
-
-            &:required ~ label::after {
-                content: '*';
-                color: $clr-blue;
-                padding-left: 0.05em;
-            }
-        }
-
-        & input,
-        & textarea {
-            &:focus ~ label,
-            &:not(:placeholder-shown) ~ label {
-                top: 0.3em;
-                font-size: 0.7em;
-            }
         }
 
         & .pattern-error,
@@ -210,6 +210,18 @@
     & .btn {
         background: $clr-black;
         color: $clr-white;
+    }
+
+    & select:user-invalid {
+        border-color: $clr-red;
+
+        & ~ label {
+            color: $clr-red;
+        }
+
+        & ~ .expired-card-error-message {
+            display: block;
+        }
     }
 
     & a.btn:hover {

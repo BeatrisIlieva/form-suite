@@ -73,10 +73,9 @@
 
                         &:checked::before {
                             content: '';
-                            width: 0.9rem;
-                            aspect-ratio: inherit;
-                            border-radius: inherit;
-                            overflow: inherit;
+                            width: 1rem;
+                            aspect-ratio: 1/1;
+                            border-radius: 50%;
                             background: $clr-black;
                             left: 50%;
                             top: 50%;

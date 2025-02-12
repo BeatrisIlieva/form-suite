@@ -118,7 +118,7 @@
                 color: transparent;
             }
 
-            &:invalid {
+            &:user-invalid {
                 border-color: $clr-red;
 
                 & ~ label {
@@ -126,7 +126,7 @@
                 }
             }
 
-            &:not(:placeholder-shown):invalid {
+            &:not(:placeholder-shown):user-invalid {
                 & ~ .pattern-error {
                     display: block;
                 }
@@ -136,7 +136,7 @@
                 }
             }
 
-            &:placeholder-shown:invalid {
+            &:placeholder-shown:user-invalid {
                 & ~ .pattern-error {
                     display: none;
                 }
@@ -154,7 +154,7 @@
                 }
             }
 
-            &:not(:placeholder-shown):valid {
+            &:not(:placeholder-shown):user-valid {
                 border-color: $clr-green;
 
                 & ~ label {

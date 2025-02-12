@@ -8,3 +8,7 @@ $clr-red: #fa2a55;
 $clr-green: #1db954;
 $clr-blue: #2334a3;
 $clr-yellow: #e0bc00;
+
+:root {
+    interpolate-size: allow-keywords;
+}

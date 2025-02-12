@@ -342,11 +342,6 @@
     }
 }
 
-.form .inner-wrapper form input[type='submit'].disabled {
-    pointer-events: none;
-    opacity: 0.6;
-}
-
 .form .inner-wrapper form .field select.invalid {
     border-color: $clr-red !important;
 

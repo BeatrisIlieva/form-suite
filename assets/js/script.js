@@ -26,6 +26,7 @@ submitElements.forEach(element => {
         const formIsInvalid = invalidInputs.length > 0;
 
         if (formIsInvalid) {
+            invalidInputs.forEach(input => input.classList.add('invalid'));
             return;
         }
 
@@ -36,7 +37,6 @@ submitElements.forEach(element => {
         confirmationElement.style.display = 'block';
 
         formElement.reset();
-        console.log(formElement);
     });
 });
 
@@ -282,8 +282,8 @@ function toggleExpiredCardStyles(hasCardExpired) {
         expiryYearSelectElement.classList.remove('invalid');
         expiredCardErrorMessageElement.style.display = 'none';
 
-        expiryMonthSelectElement.classList.add('valid')
-        expiryYearSelectElement.classList.add('valid')
+        expiryMonthSelectElement.classList.add('valid');
+        expiryYearSelectElement.classList.add('valid');
     }
 }
 

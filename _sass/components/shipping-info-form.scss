@@ -73,7 +73,7 @@
 
                         &:checked::before {
                             content: '';
-                            width: 1rem;
+                            width: 0.8rem;
                             aspect-ratio: 1/1;
                             border-radius: 50%;
                             background: $clr-black;

@@ -72,14 +72,14 @@
                         position: relative;
                         transition: background 0.3s ease-in-out;
 
-                        &::before {
+                        &:checked::before {
                             content: '';
                             width: 0.9em;
                             aspect-ratio: inherit;
                             border-radius: inherit;
                             overflow: inherit;
                             background: $clr-black;
-                            opacity: 0;
+                            // opacity: 1;
                             left: 50%;
                             top: 50%;
                             transform: translate(-50%, -50%);
@@ -88,7 +88,7 @@
                         }
 
                         &:checked::before {
-                            opacity: 1;
+                            // opacity: 1;
                         }
 
                         &:user-invalid {

@@ -118,7 +118,7 @@
                 color: transparent;
             }
 
-            &:user-invalid {
+            &:invalid {
                 border-color: $clr-red;
 
                 & ~ label {
@@ -126,7 +126,7 @@
                 }
             }
 
-            &:not(:placeholder-shown):user-invalid {
+            &:not(:placeholder-shown):invalid {
                 & ~ .pattern-error {
                     display: block;
                 }
@@ -136,7 +136,7 @@
                 }
             }
 
-            &:placeholder-shown:user-invalid {
+            &:placeholder-shown:invalid {
                 & ~ .pattern-error {
                     display: none;
                 }
@@ -154,7 +154,7 @@
                 }
             }
 
-            &:not(:placeholder-shown):user-valid {
+            &:not(:placeholder-shown):valid {
                 border-color: $clr-green;
 
                 & ~ label {
@@ -203,10 +203,10 @@
             text-shadow 0.6s ease-in-out;
     }
 
-    & input[type='submit']{
-        -webkit-appearance: none; /* Removes default appearance in WebKit browsers */
-        -moz-appearance: none;    /* Removes default appearance in Firefox */
-        appearance: none;     
+    & input[type='submit'] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
     }
     & input[type='submit'],
     & .btn {

@@ -14,7 +14,7 @@
                 
                 <form action="#" method="POST">
                     <div class="field">
-                        <input type="email" name="register-email" id="register-email" placeholder="Email" required pattern="[A-Za-z0-9]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}">
+                        <input type="email" name="register-email" id="register-email" placeholder="Email" required pattern="^[A-Za-z0-9][A-Za-z0-9\.]{1,}@{1}[A-Za-z0-9]{1,}\.{1}[A-Za-z]{1,}$">
                         <label for="register-email">Email</label>
                         <i class="fa-solid fa-envelope"></i>
                         <span class="empty-field-error">Please enter your email address</span>
@@ -30,7 +30,7 @@
                     </div>
                     
                     <div class="field">
-                        <input type="text" name="last-name" id="last-name" placeholder="Last Name" required pattern="^[A-Za-z\u00C0-\u024F&#39;\- ]{2,50}$">
+                        <input type="text" name="last-name" id="last-name" placeholder="Last Name" required pattern="^[A-Za-z\u00C0-\u024F&#39;\-\ ]{2,50}$">
                         <label for="last-name">Last Name</label>
                         <span class="empty-field-error">Please enter your last name</span>
                         <span class="pattern-error">Please enter a valid name</span>

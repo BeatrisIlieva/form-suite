@@ -154,7 +154,7 @@
                 }
             }
 
-            &:not(:placeholder-shown):valid {
+            &:not(:placeholder-shown):user-valid {
                 border-color: $clr-green;
 
                 & ~ label {
@@ -176,23 +176,6 @@
                 top: 0.3em;
                 font-size: 0.7em;
             }
-        }
-
-        & select:valid ~ label {
-            top: 0.3em;
-            font-size: 0.7em;
-        }
-
-        & select:valid {
-            border-color: $clr-green;
-
-            & ~ label {
-                color: $clr-green;
-            }
-        }
-
-        & select {
-            appearance: none;
         }
 
         & .pattern-error,
@@ -227,8 +210,8 @@
     }
 
     & a.btn:hover {
-        background:  $clr-blue;
-        text-shadow: 0 0 1em  $clr-black;
+        background: $clr-blue;
+        text-shadow: 0 0 1em $clr-black;
     }
 
     & .terms-wrapper {
@@ -313,6 +296,23 @@
     & ~ label {
         color: $clr-red !important;
     }
+}
+
+.form .inner-wrapper form .field select:valid ~ label {
+    top: 0.3em;
+    font-size: 0.7em;
+}
+
+.form .inner-wrapper form .field select.valid {
+    border-color: $clr-green;
+
+    & ~ label {
+        color: $clr-green;
+    }
+}
+
+.form .inner-wrapper form .field select {
+    appearance: none;
 }
 
 .form:nth-of-type(even) {

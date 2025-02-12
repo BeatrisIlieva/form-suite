@@ -212,8 +212,10 @@ expiryMonthSelectElement.addEventListener('change', e => {
     const expiryMonth = expiryMonthSelectElement.value;
     const expiryYear = expiryYearSelectElement.value;
 
-    const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
-    toggleExpiredCardStyles(hasCardExpired);
+    if (expiryMonth && expiryYear) {
+        const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
+        toggleExpiredCardStyles(hasCardExpired);
+    }
 });
 
 expiryYearSelectElement.addEventListener('focus', e => {
@@ -224,8 +226,10 @@ expiryYearSelectElement.addEventListener('change', e => {
     const expiryMonth = expiryMonthSelectElement.value;
     const expiryYear = expiryYearSelectElement.value;
 
-    const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
-    toggleExpiredCardStyles(hasCardExpired);
+    if (expiryMonth && expiryYear) {
+        const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
+        toggleExpiredCardStyles(hasCardExpired);
+    }
 });
 
 function createExpiryDateDropdownContent(selectElement, valueToIncrement) {
@@ -269,6 +273,9 @@ function toggleExpiredCardStyles(hasCardExpired) {
         expiryMonthSelectElement.classList.remove('invalid');
         expiryYearSelectElement.classList.remove('invalid');
         expiredCardErrorMessageElement.style.display = 'none';
+
+        expiryMonthSelectElement.classList.add('valid')
+        expiryYearSelectElement.classList.add('valid')
     }
 }
 

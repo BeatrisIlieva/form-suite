@@ -229,11 +229,6 @@
         text-shadow: 0 0 1em $clr-black;
     }
 
-    &:not(:has(:user-invalid)) input[type='submit']:hover {
-        background: $clr-blue;
-        text-shadow: 0 0 1em $clr-black;
-    }
-
     & .terms-wrapper {
         display: flex;
         align-items: center;

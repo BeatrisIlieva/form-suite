@@ -6,7 +6,7 @@
         opacity: 0.6;
         margin-bottom: 2em;
         padding-bottom: 2em;
-        border-bottom: 0.1rem solid var(--clr-medium-gray);
+        border-bottom: 0.1rem solid $clr-medium-gray;
 
         & a {
             font-variant-caps: all-small-caps;
@@ -50,11 +50,11 @@
 
         & li {
             flex-grow: 1;
-            background: var(--clr-light-gray);
+            background: $clr-light-gray;
             height: 0.4rem;
 
             &.valid {
-                background: var(--clr-green);
+                background: $clr-green;
             }
         }
     }
@@ -64,7 +64,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 0.25em;
-        color: var(--clr-medium-gray);
+        color: $clr-medium-gray;
 
         & li {
             position: relative;
@@ -81,13 +81,13 @@
 
             &::before {
                 content: '\2717';
-                color: var(--clr-medium-gray);
+                color: $clr-medium-gray;
                 display: inline-block;
             }
 
             &::after {
                 content: '\2713';
-                color: var(--clr-green);
+                color: $clr-green;
                 display: none;
             }
 

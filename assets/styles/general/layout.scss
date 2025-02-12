@@ -1,0 +1,16 @@
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.layout-item {
+    padding: 0 clamp(2dvh, calc((100dvw - 1200px) / 2), calc(100dvw / 2));
+}

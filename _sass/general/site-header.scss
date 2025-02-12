@@ -8,7 +8,7 @@ header.layout-item.site-header {
     left: 0;
     z-index: 80;
     transition: transform 0.3s ease-in-out;
-    background: var(--clr-white);
+    background: $clr-white;
 
     & .wrapper-top {
         display: flex;
@@ -49,7 +49,7 @@ header.layout-item.site-header {
                 font-variant-caps: all-small-caps;
 
                 &:hover {
-                    color: var(--clr-black);
+                    color: $clr-black;
                 }
             }
         }

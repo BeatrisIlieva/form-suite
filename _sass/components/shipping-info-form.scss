@@ -55,7 +55,7 @@
                 & .radio-field {
                     display: flex;
                     gap: 0.5em;
-                    background: var(--clr-extra-light-gray);
+                    background: $clr-extra-light-gray;
                     align-items: center;
                     padding: 1em;
                     transition: background 0.3s ease-in-out;
@@ -66,8 +66,8 @@
                         aspect-ratio: 1/1;
                         border-radius: 50%;
                         overflow: hidden;
-                        background: var(--clr-white);
-                        border: 0.1em solid var(--clr-black);
+                        background: $clr-white;
+                        border: 0.1em solid $clr-black;
                         align-self: flex-start;
                         position: relative;
                         transition: background 0.3s ease-in-out;
@@ -78,7 +78,7 @@
                             aspect-ratio: inherit;
                             border-radius: inherit;
                             overflow: inherit;
-                            background: var(--clr-black);
+                            background: $clr-black;
                             opacity: 0;
                             left: 50%;
                             top: 50%;
@@ -92,10 +92,10 @@
                         }
 
                         &:user-invalid {
-                            border-color: var(--clr-red);
+                            border-color: $clr-red;
 
                             & ~ label {
-                                color: var(--clr-red);
+                                color: $clr-red;
                             }
                         }
                     }
@@ -125,8 +125,8 @@
             }
 
             & .radio-field:has(input[type='radio']:checked) {
-                background: var(--clr-white);
-                border: 0.1em solid var(--clr-medium-gray);
+                background: $clr-white;
+                border: 0.1em solid $clr-medium-gray;
             }
         }
     }

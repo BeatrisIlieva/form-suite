@@ -3,7 +3,7 @@
         & h2 {
             margin-bottom: 1em;
             padding-bottom: 1em;
-            border-bottom: 0.1rem solid var(--clr-medium-gray);
+            border-bottom: 0.1rem solid $clr-medium-gray
         }
         & legend {
             display: flex;
@@ -41,7 +41,7 @@
             }
 
             & .expired-card-error-message {
-                color: var(--clr-red);
+                color: $clr-red;
                 margin: 0.5em 0 0.1em 0;
                 display: none;
                 font-size: 0.9em;

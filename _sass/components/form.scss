@@ -67,8 +67,8 @@
         }
 
         &:not(:has(:user-invalid)) input[type='submit']:hover {
-            background: var(--clr-blue);
-            text-shadow: 0 0 1em var(--clr-black);
+            background: $clr-blue;
+            text-shadow: 0 0 1em $clr-black;
         }
     }
 
@@ -89,7 +89,7 @@
         flex-grow: 1;
 
         & label {
-            color: var(--clr-black);
+            color: $clr-black;
             position: absolute;
             top: 1.05em;
             left: 1rem;
@@ -97,7 +97,7 @@
         }
 
         & i {
-            color: var(--clr-black);
+            color: $clr-black;
             position: absolute;
             top: 1.25em;
             right: 0.75rem;
@@ -108,7 +108,7 @@
         & select,
         & textarea {
             outline: none;
-            border: 0.08em solid var(--clr-black);
+            border: 0.08em solid $clr-black;
             border-radius: 0.1em;
             transition: border-color 0.3s ease-in-out;
             overflow: hidden;
@@ -119,10 +119,10 @@
             }
 
             &:user-invalid {
-                border-color: var(--clr-red);
+                border-color: $clr-red;
 
                 & ~ label {
-                    color: var(--clr-red);
+                    color: $clr-red;
                 }
             }
 
@@ -147,24 +147,24 @@
             }
 
             &:focus {
-                border-color: var(--clr-yellow);
+                border-color: $clr-yellow;
 
                 & ~ label {
-                    color: var(--clr-yellow);
+                    color: $clr-yellow;
                 }
             }
 
             &:not(:placeholder-shown):valid {
-                border-color: var(--clr-green);
+                border-color: $clr-green;
 
                 & ~ label {
-                    color: var(--clr-green);
+                    color: $clr-green;
                 }
             }
 
             &:required ~ label::after {
                 content: '*';
-                color: var(--clr-blue);
+                color: $clr-blue;
                 padding-left: 0.05em;
             }
         }
@@ -184,10 +184,10 @@
         }
 
         & select:valid {
-            border-color: var(--clr-green);
+            border-color: $clr-green;
 
             & ~ label {
-                color: var(--clr-green);
+                color: $clr-green;
             }
         }
 
@@ -197,7 +197,7 @@
 
         & .pattern-error,
         & .empty-field-error {
-            color: var(--clr-red);
+            color: $clr-red;
             margin: 0.5em 0 0.1em 0;
             display: none;
         }
@@ -212,7 +212,7 @@
         cursor: pointer;
         padding: 0.75em 1.25em;
         border-radius: 0.1em;
-        border: 0.1em solid var(--clr-medium-gray);
+        border: 0.1em solid $clr-medium-gray;
         flex-grow: 1;
         font-weight: 500;
         font-size: 1.1em;
@@ -222,13 +222,13 @@
 
     & input[type='submit'],
     & .btn {
-        background: var(--clr-black);
-        color: var(--clr-white);
+        background: $clr-black;
+        color: $clr-white;
     }
 
     & a.btn:hover {
-        background: var(--clr-blue);
-        text-shadow: 0 0 1em var(--clr-black);
+        background:  $clr-blue;
+        text-shadow: 0 0 1em  $clr-black;
     }
 
     & .terms-wrapper {
@@ -248,16 +248,16 @@
             position: relative;
             width: 1.4em;
             aspect-ratio: 1/1;
-            border: 0.15em solid var(--clr-light-gray);
+            border: 0.15em solid $clr-light-gray;
             z-index: 0;
             border-radius: 0.1em;
             align-self: flex-start;
 
             &:user-invalid {
-                border-color: var(--clr-red);
+                border-color: $clr-red;
 
                 & ~ label {
-                    color: var(--clr-red);
+                    color: $clr-red;
                 }
             }
 
@@ -273,14 +273,14 @@
 
             &::after {
                 content: '';
-                background: var(--clr-black);
+                background: $clr-black;
                 width: 100%;
                 aspect-ratio: 1/1;
             }
 
             &::before {
                 content: '\2713';
-                color: var(--clr-white);
+                color: $clr-white;
                 font-size: 1em;
                 z-index: 2;
             }
@@ -297,21 +297,21 @@
 
     & .confirmation {
         display: none;
-        color: var(--clr-blue);
+        color: $clr-blue;
         text-align: center;
         font-size: 1.1em;
         text-decoration: underline;
         text-underline-offset: 0.4em;
-        text-decoration-color: var(--clr-medium-gray);
+        text-decoration-color: $clr-medium-gray;
         margin-top: 0.5em;
     }
 }
 
 .form .inner-wrapper form .field select.invalid {
-    border-color: var(--clr-red) !important;
+    border-color: $clr-red !important;
 
     & ~ label {
-        color: var(--clr-red) !important;
+        color: $clr-red !important;
     }
 }
 

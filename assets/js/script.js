@@ -26,7 +26,15 @@ submitElements.forEach(element => {
         const formIsInvalid = invalidInputs.length > 0;
 
         if (formIsInvalid) {
-            invalidInputs.forEach(input => input.classList.add('invalid'));
+            invalidInputs.forEach(input => {
+                const inputIsEmpty = input.value.trim() === '';
+
+                if (inputIsEmpty) {
+                    input.classList.add('invalid-empty');
+                } else {
+                    input.classList.add('invalid-pattern');
+                }
+            });
             return;
         }
 

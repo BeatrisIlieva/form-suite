@@ -116,23 +116,23 @@
                 }
 
                 & ~ .pattern-error {
+                    display: block;
+                }
+
+                & ~ .empty-field-error {
+                    display: none;
+                }
+            }
+
+            &:not(:placeholder-shown):focus:invalid {
+                & ~ .pattern-error {
                     display: none;
                 }
 
                 & ~ .empty-field-error {
-                    display: block;
+                    display: none;
                 }
             }
-
-            // &:not(:placeholder-shown):focus:invalid {
-            //     & ~ .pattern-error {
-            //         display: none;
-            //     }
-
-            //     & ~ .empty-field-error {
-            //         display: none;
-            //     }
-            // }
 
             &:not(:placeholder-shown):focus:invalid,
             &:focus {

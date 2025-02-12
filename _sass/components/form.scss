@@ -148,11 +148,11 @@
             }
             &:not(:placeholder-shown):focus:invalid {
                 & ~ .pattern-error {
-                    color: $clr-yellow;
+                    display: none;
                 }
 
                 & ~ .empty-field-error {
-                    color: $clr-yellow;
+                    display: none;
                 }
             }
             &:not(:placeholder-shown):focus:invalid,

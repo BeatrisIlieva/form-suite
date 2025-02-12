@@ -293,19 +293,35 @@
     }
 }
 
-.form .inner-wrapper form .field input.invalid {
+.form .inner-wrapper form .field input.invalid-empty {
     border-color: $clr-red;
 
     & ~ label {
         color: $clr-red;
     }
 
-    // & ~ .pattern-error {
-    //     display: block;
-    // }
+    & ~ .pattern-error {
+        display: none;
+    }
 
     & ~ .empty-field-error {
         display: block;
+    }
+}
+
+.form .inner-wrapper form .field input.invalid-pattern {
+    border-color: $clr-red;
+
+    & ~ label {
+        color: $clr-red;
+    }
+
+    & ~ .pattern-error {
+        display: block;
+    }
+
+    & ~ .empty-field-error {
+        display: none;
     }
 }
 

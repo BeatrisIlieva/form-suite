@@ -14,7 +14,8 @@ html {
 button,
 blockquote,
 select,
-textarea {
+textarea,
+input {
     box-sizing: inherit;
     font: inherit;
 }
@@ -24,6 +25,7 @@ a,
 img,
 figure,
 details,
+input,
 details > summary {
     display: block;
 }

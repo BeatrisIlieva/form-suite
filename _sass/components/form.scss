@@ -224,7 +224,8 @@
         }
     }
 
-    & a.btn:hover {
+    & a.btn:hover,
+    input[type='submit']:hover {
         background: $clr-blue;
         text-shadow: 0 0 1em $clr-black;
     }

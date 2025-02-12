@@ -40,6 +40,13 @@ submitElements.forEach(element => {
 
         e.preventDefault();
 
+        const validInputs = formElement.querySelectorAll('input');
+
+        validInputs.forEach(input => {
+            input.classList.remove('invalid-empty');
+            input.classList.remove('invalid-pattern');
+        });
+
         const confirmationElement = element.nextElementSibling;
 
         confirmationElement.style.display = 'block';

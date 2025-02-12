@@ -10,13 +10,22 @@ footer.layout-item.site-footer {
     & .wrapper {
         display: flex;
         gap: 0.5em;
-    }
 
-    & p {
-        opacity: 0.5;
-        font-style: italic;
-        padding: 0;
-        font-weight: 500;
+        & p {
+            opacity: 0.5;
+            font-style: italic;
+            padding: 0;
+            font-weight: 500;
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+            align-items: center;
+
+            & p {
+                text-align: center;
+            }
+        }
     }
 
     & a,
@@ -27,5 +36,9 @@ footer.layout-item.site-footer {
     & a span,
     & a i {
         color: $clr-black;
+    }
+
+    @media (max-width: 480px) {
+        text-align: center;
     }
 }

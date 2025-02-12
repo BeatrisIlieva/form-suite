@@ -25,7 +25,18 @@ submitElements.forEach(element => {
 
         const formIsInvalid = invalidInputs.length > 0;
 
-        if (formIsInvalid) {
+        let hasCardExpired;
+
+        if (formElement.id === 'card-details-form') {
+            const expiryMonth = expiryMonthSelectElement.value;
+            const expiryYear = expiryYearSelectElement.value;
+
+            hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
+
+            toggleExpiredCardStyles(hasCardExpired);
+        }
+
+        if (formIsInvalid || hasCardExpired) {
             invalidInputs.forEach(input => {
                 const inputIsEmpty = input.value.trim() === '';
 
@@ -272,19 +283,7 @@ function createExpiryDateDropdownContent(selectElement, valueToIncrement) {
     }
 }
 
-const cardDetailsFormSubmitElement = document.querySelector(
-    '#card-details-form input[type="submit"]'
-);
 const expiredCardErrorMessageElement = document.querySelector('.expired-card-error-message');
-
-cardDetailsFormSubmitElement.addEventListener('click', e => {
-    const expiryMonth = expiryMonthSelectElement.value;
-    const expiryYear = expiryYearSelectElement.value;
-
-    const hasCardExpired = validateExpiryDate(expiryMonth, expiryYear);
-
-    toggleExpiredCardStyles(hasCardExpired);
-});
 
 function toggleExpiredCardStyles(hasCardExpired) {
     if (hasCardExpired) {
@@ -295,10 +294,11 @@ function toggleExpiredCardStyles(hasCardExpired) {
     } else {
         expiryMonthSelectElement.classList.remove('invalid');
         expiryYearSelectElement.classList.remove('invalid');
+
         expiredCardErrorMessageElement.style.display = 'none';
 
-        expiryMonthSelectElement.classList.add('valid');
-        expiryYearSelectElement.classList.add('valid');
+        // expiryMonthSelectElement.classList.add('valid');
+        // expiryYearSelectElement.classList.add('valid');
     }
 }
 

@@ -339,10 +339,14 @@
 }
 
 .form .inner-wrapper form .field select.invalid {
-    border-color: $clr-red !important;
+    border-color: $clr-red ;
 
     & ~ label {
-        color: $clr-red !important;
+        color: $clr-red ;
+    }
+
+    & .expired-card-error-message {
+        display: block;
     }
 }
 
@@ -352,10 +356,14 @@
 }
 
 .form .inner-wrapper form .field select.valid {
-    border-color: $clr-green;
+    border-color: $clr-green ;
 
     & ~ label {
-        color: $clr-green;
+        color: $clr-green ;
+    }
+
+    & .expired-card-error-message {
+        display: none !important;
     }
 }
 

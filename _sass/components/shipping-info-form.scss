@@ -62,12 +62,11 @@
 
                     & input[type='radio'] {
                         appearance: none;
-                        width: 1.25em;
+                        width: 1.25rem;
                         aspect-ratio: 1/1;
                         border-radius: 50%;
-                        // overflow: hidden;
                         background: $clr-white;
-                        border: 0.1em solid $clr-black;
+                        border: 0.1rem solid $clr-black;
                         align-self: flex-start;
                         position: relative;
                         transition: background 0.3s ease-in-out;
@@ -79,16 +78,10 @@
                             border-radius: inherit;
                             overflow: inherit;
                             background: $clr-black;
-                            // opacity: 1;
                             left: 50%;
                             top: 50%;
                             transform: translate(-50%, -50%);
                             position: absolute;
-                            // transition: opacity 0.3s ease-in-out;
-                        }
-
-                        &:checked::before {
-                            // opacity: 1;
                         }
 
                         &:user-invalid {

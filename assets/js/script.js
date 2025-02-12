@@ -208,6 +208,10 @@ expiryMonthSelectElement.addEventListener('focus', e => {
     createExpiryDateDropdownContent(expiryMonthSelectElement, 1);
 });
 
+expiryMonthSelectElement.addEventListener('click', e => {
+    createExpiryDateDropdownContent(expiryMonthSelectElement, 1);
+});
+
 expiryMonthSelectElement.addEventListener('change', e => {
     const expiryMonth = expiryMonthSelectElement.value;
     const expiryYear = expiryYearSelectElement.value;
@@ -219,6 +223,10 @@ expiryMonthSelectElement.addEventListener('change', e => {
 });
 
 expiryYearSelectElement.addEventListener('focus', e => {
+    createExpiryDateDropdownContent(expiryYearSelectElement, currentYear);
+});
+
+expiryYearSelectElement.addEventListener('click', e => {
     createExpiryDateDropdownContent(expiryYearSelectElement, currentYear);
 });
 

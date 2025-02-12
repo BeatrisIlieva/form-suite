@@ -26,6 +26,9 @@ submitElements.forEach(element => {
         const formIsInvalid = invalidInputs.length > 0;
 
         if (formIsInvalid) {
+            const submitElement = formElement.querySelector('input[type="submit"]');
+            submitElement.classList.add('disabled');
+
             invalidInputs.forEach(input => {
                 const inputIsEmpty = input.value.trim() === '';
 

@@ -6,6 +6,9 @@ Welcome! This project showcases a collection of modern, user-friendly web forms 
 
 ##### Visit our website at: https://form-suite.pages.dev
 
+### Demo video:
+[![Watch the video](https://img.youtube.com/vi/P7-0cXRjjQs/maxresdefault.jpg)](https://www.youtube.com/watch?v=P7-0cXRjjQs)
+
 ### Features
 - Custom Form Validation – Interactive validation messages using CSS (**:valid**, **:invalid**), HTML patterns, and required fields
 - Floating Labels – Clean, space-saving input labels using **::placeholder-shown**
